@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object tracks the lead scoring rules to help prioritize leads based on who they are and what they do.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>In-Active rules are NOT evaluated when a lead or campaign member is saved.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In-Active rules are NOT evaluated when a lead or campaign member is saved.</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Selecting a campaign limits the rule to fire only for members of this campaign.  Leaving this blank selects all campaigns.</description>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Lead Scoring Rules</relationshipLabel>
+        <relationshipName>Lead_Scoring_Rules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Field_Label__c</fullName>
+        <description>This contains the more readable field label of the Field name.  Note this approach doesn&apos;t solve for an org has two fields with the same label.  There&apos;s a chance the wrong field would be used.</description>
+        <externalId>false</externalId>
+        <label>Field Label</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Field_Name__c</fullName>
+        <description>Field name used for criteria</description>
+        <externalId>false</externalId>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Operator</label>
+        <picklist>
+            <picklistValues>
+                <fullName>equals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>not equal to</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>greater than</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>less than</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>greater or equal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>less or equal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>contains</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>does not contain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>starts with</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Score_Change__c</fullName>
+        <externalId>false</externalId>
+        <label>Points</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Rule Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Lead Scoring Rule</label>
+    <nameField>
+        <label>LeadScoringRule Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Lead Scoring Rules</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Max_length_80_Char</fullName>
+        <active>true</active>
+        <description>Nice error message for Max Length of &apos;Value&apos; which is 80 characters</description>
+        <errorConditionFormula>LEN(Value__c ) &gt;255</errorConditionFormula>
+        <errorMessage>You can only use 80 characters for &apos;Value&apos;.  Please shorten your criteria before saving again.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Commas</fullName>
+        <active>true</active>
+        <description>Disallows comma&apos;s in Value as my code doesn&apos;t support them</description>
+        <errorConditionFormula>OR(contains( Value__c, &apos;,&apos;) , contains( Value__c, &apos;;&apos;))</errorConditionFormula>
+        <errorMessage>Unfortunately, you cannot use a comma or semicolon for either multiple values or numbers. Please remove any commas and semicolons, and if desired, create a second rule for additional criteria.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_LeadScore_CampaignScore_TotalScore</fullName>
+        <active>true</active>
+        <errorConditionFormula>Field_Name__c ==&apos;lead_score__c&apos;|| Field_Name__c ==&apos;campaign_score__c&apos;|| Field_Name__c ==&apos;total_score__c&apos;</errorConditionFormula>
+        <errorMessage>You cannot create a rule with Field Name referencing Lead Score, Campaign Score, or Total Score.  Please change the field name for this rule.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Type</fullName>
+        <active>true</active>
+        <description>Errors if Type is not selected or == --None--</description>
+        <errorConditionFormula>ISPICKVAL(Type__c,&apos;&apos;)||ISPICKVAL(Type__c,&apos;--None--&apos;)</errorConditionFormula>
+        <errorMessage>You must select a Type such as Lead or Campaign Member</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>NullPoints</fullName>
+        <active>true</active>
+        <description>Errors if Score is set to null</description>
+        <errorConditionFormula>isnull( Score_Change__c ) || isBlank(Score_Change__c)</errorConditionFormula>
+        <errorMessage>You must enter a value for Points.  
+
+Note you can enter negative values to decrease the lead score if criteria is met.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rule_field_operator_are_valid</fullName>
+        <active>true</active>
+        <description>Checks that the rule has a valid field  operator</description>
+        <errorConditionFormula>ISNULL(Field_Name__c)  ||Field_Name__c==&apos;&apos; || ISNULL(text(Operator__c )) || ISNULL(text(Type__c)) || ISNULL(Value__c)  || Value__c==&apos;&apos;</errorConditionFormula>
+        <errorMessage>You must select a field, operator, and value before saving.  Blank or null values are not supported as valid values.</errorMessage>
+    </validationRules>
+</CustomObject>

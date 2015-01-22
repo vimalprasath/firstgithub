@@ -1,0 +1,565 @@
+<apex:page title="Customer Assessment " sidebar="false" showHeader="false" controller="CO_CustomerAssessmentController" >
+ <link href="https://www.capitalone.com/assets/css/global/default.css" rel="stylesheet" type="text/css"/>
+ <link href="https://www.capitalone.com/assets/css/global/supernav.css" rel="stylesheet" type="text/css" />
+ <style>
+    
+        
+
+     .ForHide 
+     {
+     padding-left:50px;
+     display:none;
+     }
+ </style>
+<script type="text/javascript">
+
+    function ShowNext( selv, div2)
+    {
+    var assbtn,conti;
+    assbtn=document.getElementById("b1");
+    var nextConti= document.getElementById("b2");
+        //var div2 = document.getElementById("d2");
+    if((selv.value=="No"&&div2.id=="d8")||(selv.value=="No"&&div2.id=="d9")||(selv.value=="No"&&div2.id=="d11")||(selv.value=="No"&&div2.id=="d12"))
+         {
+         div2.style.display = "none";
+         toggle_hideme(div2)
+         assbtn.style.display="block";
+         conti=document.getElementById("d3a");
+        conti.style.display="none";
+         }
+        else if(selv.value == "No")
+        {
+            div2.style.display = "block";
+            assbtn.style.display="none";
+            conti=document.getElementById("d3a");
+            conti.style.display="none";
+            document.getElementById("d4a").style.display="none";
+            nextConti.style.display="none";
+            
+        }
+    if((selv.value=="Yes"&&div2.id=="d8")||(selv.value=="Yes"&&div2.id=="d9")||(selv.value=="Yes"&&div2.id=="d11")||(selv.value=="Yes"&&div2.id=="d12"))
+            {
+            div2.style.display = "block";
+            assbtn.style.display="none";
+            conti=document.getElementById("d3a");
+            conti.style.display="none";
+            }
+         else if (selv.value == "Yes" && div2.id!="d3" && div2.id != "d10" && div2.id != "d13" && div2.id != "d14" && div2.id != "d15") <!--&&div2.id != "d10"-->
+            {
+           // alert("entered yes and d3");
+            div2.style.display = "none";
+            conti=document.getElementById("d3"); <!--was d3a-->
+            conti.style.display="none";
+            toggle_hideme(div2)
+            assbtn.style.display="block"; 
+            
+            //   (document.getElementById("d3")).style.display="none";
+               
+            nextConti.style.display="none";
+            }
+            
+            <!--added deb-->
+             else if (selv.value == "Yes" && div2.id=="d10" )
+            {
+           // alert("entered yes and d10");
+            div2.style.display = "none";
+            conti=document.getElementById("d3a"); <!--was d3a-->
+            conti.style.display="none";
+            toggle_hideme(div2)
+            assbtn.style.display="block"; 
+            
+            //   (document.getElementById("d3")).style.display="none";
+               
+            nextConti.style.display="none";
+            }
+            
+            else if (selv.value == "Yes" && div2.id=="d13" )
+            {
+           // alert("entered yes and d10");
+            div2.style.display = "none";
+            conti=document.getElementById("d3a"); <!--was d3a-->
+            conti.style.display="none";
+            toggle_hideme(div2)
+            assbtn.style.display="block"; 
+            
+            //   (document.getElementById("d3")).style.display="none";
+               
+            nextConti.style.display="none";
+            }
+            
+            else if (selv.value == "Yes" && div2.id=="d14" )
+            {
+           // alert("entered yes and d10");
+            div2.style.display = "none";
+            conti=document.getElementById("d3a"); <!--was d3a-->
+            conti.style.display="none";
+            toggle_hideme(div2)
+            assbtn.style.display="block"; 
+            
+            //   (document.getElementById("d3")).style.display="none";
+               
+            nextConti.style.display="none";
+            }
+            
+            else if (selv.value == "Yes" && div2.id=="d15" )
+            {
+           // alert("entered yes and d10");
+            div2.style.display = "none";
+            conti=document.getElementById("d3a"); <!--was d3a-->
+            conti.style.display="none";
+            toggle_hideme(div2)
+            assbtn.style.display="block"; 
+            
+            //   (document.getElementById("d3")).style.display="none";
+               
+            nextConti.style.display="none";
+            }
+            <!--added deb-->
+            
+            
+        else if(selv.value == "Yes" && div2.id=="d3")
+            {
+           // alert("hello");
+                div2.style.display = "none";
+                assbtn.style.display="none";
+                toggle_hideme(div2)
+                conti=document.getElementById("d3a");
+                conti.style.display="block";
+                
+               (document.getElementById("d3")).style.display="none";
+               
+                nextConti.style.display="none";
+             }
+    }
+ function VerifyRange(pr)
+    {   
+     var assbtn,conti;
+    conti=document.getElementById("b2");
+    assbtn=document.getElementById("b1");
+    if(!pr.value) {
+   // alert("PLease enter a value");
+    }
+    else if(pr.value>=100000 && pr.value<=417000)
+        {
+        // alert("amount entered"+pr.value+val+dv.value );
+        ShowNext(document.getElementById('sel2'),document.getElementById('d4'));
+        // dv.style.display = "block";
+        }
+        else if(pr.value>417000)
+        {
+      //  ShowNext(document.getElementById('sel2'),document.getElementById('d4')); <!--appended-->
+       // alert("amount less than 100000");
+        toggle_hideme(document.getElementById('d4'))
+        assbtn.style.display="block";
+        conti.style.display="none";
+        }
+         else if(pr.value<100000)
+        {
+        //ShowNext(document.getElementById('sel2'),document.getElementById('d4'));
+        // alert("amount less than 100000");
+        toggle_hideme(document.getElementById('d4'))
+        assbtn.style.display="none";
+        conti.style.display="block";
+        }
+        
+    }
+function VerifyRange_CashBack(range)
+    {
+    var assbtn,conti;
+    conti=document.getElementById("b2");
+    assbtn=document.getElementById("b1");
+    if(!range.value) {
+   // alert("Please enter a value");
+    }
+    else if(range.value<100000)
+        {
+        //ShowNext(document.getElementById('sel2'),document.getElementById('d4'));
+        //toggle_hideme(document.getElementById('d4'))
+        //assbtn.style.display="block";
+        conti.style.display="block";
+        assbtn.style.display="none";
+        }
+    else if(range.value>=100000)
+        {
+        //ShowNext(document.getElementById('sel2'),document.getElementById('d4'));
+        //toggle_hideme(document.getElementById('d4'))
+        //assbtn.style.display="block";
+        conti.style.display="none";
+        assbtn.style.display="block";
+        }
+    }
+    function VerifyState(st1)
+    {       var assbtn;
+            assbtn=document.getElementById("b1");
+            var st=st1.value.toUpperCase();
+            if(!st) {
+            //alert("Please enter a value");
+            }
+            else if((st=="TX" ||st=="NJ" ||st=="NY" ||st=="CT" ||
+            st=="DE" ||st=="MD" ||st=="DC" ||st=="LA" ||
+            st=="VA" )&& st!="")
+            {
+              ShowNext(document.getElementById('sel2'),document.getElementById('d5'));
+            }
+            else
+            {
+            toggle_hideme(document.getElementById('d5'))
+            assbtn.style.display="block";
+            }
+    }
+function CheckCashback(cb,div1)
+    {
+    var assbtn;
+    var conti;
+    assbtn=document.getElementById("b2");
+    conti=document.getElementById("b1");
+   // alert(cb.value);
+   // alert(div1.id);
+    if(cb.value=="Access to Cash Over Time")
+        {
+        div1.style.display="none";
+        assbtn.style.display="block";
+        conti.style.display="none";
+        }
+    if(cb.value=="Cash Back Now")
+        {
+        assbtn.style.display="none";
+        div1.style.display="block";
+        conti.style.display="none";
+        }
+    
+    }
+    
+    
+  function VerifyRate(rt)
+    {
+        var assbtn;
+        assbtn=document.getElementById("b2"); <!-- was b1 -->
+        conti=document.getElementById("b1");
+        if(!rt.value) {
+        //alert("Please enter a value");
+        }
+        else if(rt.value>=3.8) <!--Changed to >= instead of < -->
+        {
+        ShowNext(document.getElementById('sel2'),document.getElementById('d6'));
+        }
+        else if(rt.value<3.8)
+        {
+        toggle_hideme(document.getElementById('d6'))
+        assbtn.style.display="block";
+        conti.style.display="none";
+        }
+        //rt.value=rt.value+"%";
+    }
+
+    
+    
+function VerifyLTV(pv)
+    {
+    var LTV,la,sla,assbtn;
+        assbtn=document.getElementById("b1");
+        la=document.getElementById('LoanAmount').value;
+        if(!pv.value) {
+       // alert("Please enter a value");
+        }
+        else {
+      //  sla=la.substr(1);
+        LTV=((la/pv.value)*100);
+      //  alert(la);
+       //  alert(pv.value);
+        //  alert(LTV.toFixed());
+        if(LTV.toFixed()<70)
+        {
+        ShowNext(document.getElementById('sel2'),document.getElementById('d7'));
+        }
+        else if (LTV.toFixed()>70)
+        {
+       // alert("544546"+la);
+       //  alert("544546"+LTV);
+            
+            
+        toggle_hideme(document.getElementById('d7'))
+        assbtn.style.display="block";
+        
+        }
+        }
+    }
+function CreditScore()
+    {
+    var assbtn;
+    assbtn=document.getElementById("b1");
+    assbtn.style.display="block";
+    }
+function getElementsByClass(searchClass, domNode, tagName) {
+    if (domNode == null) domNode = document;
+    if (tagName == null) tagName = '*';
+    var el = new Array();
+    var tags = domNode.getElementsByTagName(tagName);
+    var tcl = " "+searchClass+" ";
+    for(i=0,j=0; i<tags.length; i++) {
+        var test = " " + tags[i].className + " ";
+        if (test.indexOf(tcl) != -1)
+        el[j++] = tags[i];
+    }
+    return el;
+}
+ 
+function toggle_hideme(div2)
+{
+var i,dtag,hellos;
+    dtag=parseInt((div2.id).substring(1));
+    //alert(dtag);
+    var hellos = getElementsByClass("ForHide", null, "div");
+    for(var i =(dtag); i<hellos.length; i++)
+    {
+        hellos[i].style.display = "none";
+    }
+}
+    
+</script>
+<body>
+
+<div role="banner" id="header"> 
+
+<div class="cap-one-logo-sprite"> 
+ <h1>
+  <a href="https://www.capitalone.com/" title="Back to Capital One home">
+  <img class="logo-cap-one" src="https://www.capitalone.com/assets/img/global/logo/sprite/header-logo.ns.png" title="Capital One® logo with a link to the home page" alt="Capital One logo" height="187" width="241"/>
+  </a>
+ </h1> 
+</div>
+</div>
+
+<div id="qDiv" style="width:900px;">
+<span style="background-color:#DDDDDD;padding-left:1200px;padding-right:20px;">
+<a href="MyProfilePage" style="align:right">Edit&nbsp;&nbsp;Profile</a>&nbsp;|&nbsp;<a href="/customer/secur/logout.jsp">Sign&nbsp;Out</a>
+
+</span>
+<span style="background-color:#cccccc;padding-left:50px;padding-right:650px;font-size:16px;padding-top:2px;"><b style="color:darkblue;">Customer&nbsp;&nbsp;Assessment</b></span>
+
+
+<form name="Form">
+<div style="height:250px; overflow:auto; border:0">
+        <div id="d1" style="display:block;padding-left:50px;padding-top:25px;" align="50px">
+          <label> 1.Are you Purchasing a Home? </label>
+            <span style="margin-left:301px">
+            <select id="sel1" name="q1" style="width:140px" onchange="ShowNext(this,document.getElementById('d2'))">
+                <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+            </select>
+            </span >
+        </div>
+        <div id="d2" class="ForHide" style="padding-top:10px;">
+        <label>    2.Are you looking to get cash back in the transaction?:</label>
+            <span style="margin-left:179px">
+            <select id="sel2" name="sel2"  style="width:140px" onchange="ShowNext(document.getElementById('sel2'),document.getElementById('d3'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+            </select>
+            </span>
+        </div>
+        <div id="d3" class="ForHide" style="padding-top:10px;">
+            
+         <label> 3.What is the total amount you are looking to finance
+                        (including cash back amount)?</label>
+            <span style="padding-left:9px;">
+                $<input type="text" id="LoanAmount" name="LoanAmount" style="width:133px" onblur="VerifyRange(document.getElementById('LoanAmount'),document.getElementById('d4'))"/>
+            </span>     
+        </div>
+        
+                
+        <div id="d3a" class="ForHide" style="display:none;padding-top:10px;">
+          <label>  3.Do you want cash (back) now or do you want access to cash over a period of time?</label>
+          <span style="padding-left:12px;">
+           <select id="sel3a" name="sel3a" style="width:140px" onchange="CheckCashback(this,document.getElementById('d4a'))" >
+                <option value="" selected="selected"></option>
+                <option value="Access to Cash Over Time" >Access to Cash Over Time</option>
+                <option value="Cash Back Now" >Cash Back Now</option>
+            </select>   
+        </span>
+       </div>
+        
+        <div id="d4a" class="ForHide" style="display:none;padding-top:10px;">
+            <label>    4.What is the total amount you are looking to finance
+                       (including cash back amount)?</label>
+                <span style="padding-left:8px;">
+                $<input type="text" id="LoanPrice"  name="LoanPrice" style="width:132px" onblur="VerifyRange_CashBack(this)"/>
+               </span> 
+        </div> 
+                
+        
+    
+        <div id="d4" class="ForHide" style="padding-top:10px;">
+            <label>   4.Where is the property located?</label>
+                <span style="padding-left:297px;">  
+                     <input type="text" id="state" style="width:133px"  name="state" onblur="VerifyState(document.getElementById('state'))"/>
+                </span>
+        </div>
+    
+        <div id="d5" class="ForHide" style="padding-top:10px;">
+           <label> 5.What is the current rate on your loan?</label>
+                <span style="padding-left:260px;">
+                     <input type="text" id="rate" style="width:133px" name="rate" onblur="VerifyRate(document.getElementById('rate'))"/>%
+                </span>
+        </div>
+   
+        <div id="d6" class="ForHide" style="padding-top:10px;">
+            <label> 6.What is the approximate value of your property?</label>
+                <span style="padding-left:206px;">
+                     <input type="text" id="PropertyValue"  style="width:133px" name="PropertyValue" onblur="VerifyLTV(document.getElementById('PropertyValue'))"/>
+                </span>
+        </div>
+    
+
+
+    
+        <div id="d7" class="ForHide" style="padding-top:10px;">
+            7.Is this property the primary residence of all applicants?
+            <span style="padding-left:165px;">
+                 <select id="sel3" name="sel3" style="width:140px" onchange="ShowNext(document.getElementById('sel3'),document.getElementById('d8'))" >
+                <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+       </div>
+     
+        <div id="d8" class="ForHide" style="padding-top:10px;">
+          <label>  8.Is this property a single unit residence,condo,
+                            townhouse or PUD?</label>
+                <span style="padding-left:101px;">          
+                 <select id="sel4" name="sel4" style="width:140px" onchange="ShowNext(document.getElementById('sel4'),document.getElementById('d9'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+        </div>
+    
+        <div id="d9" class="ForHide" style="padding-top:10px;">
+           <label> 9.Do you or any other co-applicants own any other real
+                                    estate?</label>
+                <span style="padding-left:134px;">  
+                 <select id="sel5" name="sel5" style="width:140px" onchange="ShowNext(document.getElementById('sel5'),document.getElementById('d10'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span> 
+        </div>
+   
+        <div id="d10" class="ForHide" style="padding-top:10px;">
+            <label>10.Do you receive W-2 Income?</label>
+            <span style="padding-left:300px;">  
+                 <select id="sel6" name="sel6" style="width:140px" onchange="ShowNext(document.getElementById('sel6'),document.getElementById('d11'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+        </div>
+     
+        <div id="d11" class="ForHide" style="padding-top:10px;">
+         <label>   11.Do you receive less than 25% of your W-2 income in
+                            commissions?</label>
+                <span style="padding-left:87px;">   
+                 <select id="sel7" name="sel7" style="width:140px" onchange="ShowNext(document.getElementById('sel7'),document.getElementById('d12'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select    >
+            </span> 
+        </div>
+    
+        <div id="d12" class="ForHide" style="padding-top:10px;">
+           <label>12.Have you had a 60,90 day or greater delinquency in
+                          the last 6 months?</label>
+                <span style="padding-left:73px;">         
+                 <select id="sel8" name="sel8" style="width:140px" onchange="ShowNext(document.getElementById('sel8'),document.getElementById('d13'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+        </div>
+    
+        <div id="d13" class="ForHide" style="padding-top:10px;">
+          <label>  13.Have you had a loan charged off in the last 6 months ?</label>
+                <span style="padding-left:160px;">      
+                 <select id="sel9" name="sel9" style="width:140px" onchange="ShowNext(document.getElementById('sel9'),document.getElementById('d14'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+        </div>
+     
+        <div id="d14" class="ForHide" style="padding-top:10px;">
+            <label>14.Have you ever filed for bankruptcy?</label>
+            <span style="padding-left:268px;">  
+                 <select id="sel10" name="sel10" style="width:140px" onchange="ShowNext(document.getElementById('sel10'),document.getElementById('d15'))" >
+                 <option value="" selected="selected"></option>
+                <option value="Yes" >Yes</option>
+                <option value="No" >No</option>
+                </select>
+            </span>
+        </div>
+     
+        <div id="d15" class="ForHide" style="padding-top:10px;">
+          <label>  15.How would you rate your credit ?</label>
+          <span style="padding-left:280px;">    
+                 <select id="sel11" name="sel11" style="width:140px" onchange="CreditScore()" >
+                 <option value="" selected="selected"></option>
+                <option value="Excellent" >Excellent</option>
+                <option value="Good" >Good</option>
+                <option value="Fair" >Fair</option>
+                <option value="Bad" >Bad</option>
+                </select>
+        </span>
+        </div>
+</div>
+</form>
+
+<apex:form >
+<div>
+     <div id="b1" style="display:none; align:right;padding-left:300px;padding-top:10px"> <!--padding-top:50px;-->
+        <span style="right:350px;">
+            
+            Assessment Complete.Click Next to Continue
+        </span>
+        <span style="position:inherit;bottom:0; right:450px;height:25px;float:right">
+              <apex:commandButton action="{!toNext}" value="Next" id="toReferralPage" />
+        </span>   
+ </div>
+
+     <span style="position:inherit;absolute:0;left:50px;">
+        <apex:commandButton action="{!toCancel}" value="Cancel" id="toReferralPipeline" />
+    </span>
+
+<!--</div> -->
+                         
+    
+
+
+<!---toContinue--->
+<div id="b2" style="display:none;align:right;padding-left:300px;padding-top:10px;">
+<span style="right:300px;padding-left:20px;">
+<b>
+  Referral to Home Equity is recommended. To proceed with referral to Home Equity select Next. To proceed with Mortgage Referral select Continue. 
+</b>
+</span>
+
+    <span style="position:inherit;bottom:0; right:450px;height:25px;float:right">
+            <apex:commandButton action="{!toNext}" style="float:right;" value="Continue" id="toNext"/>
+            <apex:commandButton action="{!toContinue}" style="float:right;" value="Next" id="toContinue"/>
+          <!--  <apex:commandLink action="{!toContinue}" style="border-left;" value="Sign Out" id="SignOut"/>-->
+    </span>          
+         
+</div>
+</div>
+</apex:form>
+</div>
+</body>
+</apex:page>

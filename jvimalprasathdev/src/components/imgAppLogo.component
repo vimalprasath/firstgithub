@@ -1,0 +1,10 @@
+<apex:component access="global" controller="ImageUrlController">
+<apex:attribute name="imageName" type="string" description="This bring the img src url" assignTo="{!imgname}"/>
+
+<!-- Please create the below URL from controller and put that in the value here-->
+
+<!-- Please Use the URL.getSalesforceBaseUrl().toExternalForm(); to get the base URL & then add the document Id * Organization ID and height & width --->
+<apex:image id="top_Banner" value="{!imgurl}" height="105px" width="792px" rendered="{!showtopimage}"/>
+<apex:image id="bottom_banner" value="{!imgurl}" height="39px" width="36px" rendered="{!(!showtopimage)}"/>
+
+</apex:component>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Assign_varDisposition_for_Invalid_Property_Type</name>
+        <label>Assign varDisposition</label>
+        <locationX>57</locationX>
+        <locationY>297</locationY>
+        <assignmentItems>
+            <assignToReference>varDisposition</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>InvalidPropertyType_Out</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_varDisposition_for_No_Product_Available</name>
+        <label>Assign varDisposition</label>
+        <locationX>408</locationX>
+        <locationY>290</locationY>
+        <assignmentItems>
+            <assignToReference>varDisposition</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NoProductAvailable_out</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <choices>
+        <name>Condo_LTV_80</name>
+        <choiceText>Condo LTV &gt; 80%</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Condo LTV &gt; 80%</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Invalid_Property_Type</name>
+        <choiceText>Invalid Property Type</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Invalid Property Type</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Multifamily</name>
+        <choiceText>Multifamily</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Multifamily</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Other</name>
+        <choiceText>Other</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Other</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Out_of_Footprint_FHA</name>
+        <choiceText>Out of Footprint FHA</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Out of Footprint FHA</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Out_of_Footprint_VA</name>
+        <choiceText>Out of Footprint VA</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Out of Footprint VA</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Invalid_Property_Type_Selected</name>
+        <label>Invalid Property Type?</label>
+        <locationX>225</locationX>
+        <locationY>75</locationY>
+        <defaultConnector>
+            <targetReference>No_Product_Available_selected</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Invalid_Property_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varDisposition</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Invalid_Property_Type</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Additional_Data_Required_for_Invalid_Property_Type</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>No_Product_Available_selected</name>
+        <label>No Product Available</label>
+        <locationX>226</locationX>
+        <locationY>186</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes_No_Product_Selected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varDisposition</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No Product Available</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Additional_Data_Required_for_No_Product_Available</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>InvalidPropertyType_Out</name>
+        <dataType>String</dataType>
+        <expression>{!varDisposition} &amp; &quot;: &quot; &amp; {!AdditonalData1}</expression>
+    </formulas>
+    <formulas>
+        <name>NoProductAvailable_out</name>
+        <dataType>String</dataType>
+        <expression>{!varDisposition} &amp; &quot;: &quot; &amp; {!AdditonalData2}</expression>
+    </formulas>
+    <label>CC Assignment sub-flow</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Additional_Data_Required_for_Invalid_Property_Type</name>
+        <label>Additional Data Required for Invalid Property Type</label>
+        <locationX>57</locationX>
+        <locationY>189</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <connector>
+            <targetReference>Assign_varDisposition_for_Invalid_Property_Type</targetReference>
+        </connector>
+        <fields>
+            <name>InvalidPropertyType_header</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Additional Data is required for selection &amp;quot;Invalid Property Type&amp;quot;&lt;/FONT&gt;&lt;/SPAN&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>AdditonalData1</name>
+            <choiceReferences>Multifamily</choiceReferences>
+            <choiceReferences>Condo_LTV_80</choiceReferences>
+            <choiceReferences>Other</choiceReferences>
+            <dataType>String</dataType>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+    </screens>
+    <screens>
+        <name>Additional_Data_Required_for_No_Product_Available</name>
+        <label>Additional Data Required for No Product Available</label>
+        <locationX>408</locationX>
+        <locationY>187</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <connector>
+            <targetReference>Assign_varDisposition_for_No_Product_Available</targetReference>
+        </connector>
+        <fields>
+            <name>NoProductAvailable_text</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Additional Data is required for selection &amp;quot;No Product Available&amp;quot;&lt;/FONT&gt;&lt;/SPAN&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>AdditonalData2</name>
+            <choiceReferences>Out_of_Footprint_VA</choiceReferences>
+            <choiceReferences>Out_of_Footprint_FHA</choiceReferences>
+            <choiceReferences>Other</choiceReferences>
+            <dataType>String</dataType>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>Invalid_Property_Type_Selected</startElementReference>
+    <variables>
+        <description>Call Disposition</description>
+        <name>varDisposition</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

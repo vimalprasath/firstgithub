@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Realtor Contacts</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Realtor Contacts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+        <relationshipLabel><!-- Realtor Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Birth Date --></label>
+        <name>Birth_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Type --></label>
+        <name>Contact_Type__c</name>
+        <picklistValues>
+            <masterLabel>Attorney</masterLabel>
+            <translation><!-- Attorney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Builder</masterLabel>
+            <translation><!-- Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA</masterLabel>
+            <translation><!-- CPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Referral</masterLabel>
+            <translation><!-- Customer Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portal</masterLabel>
+            <translation><!-- Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous Customer</masterLabel>
+            <translation><!-- Previous Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Realtor</masterLabel>
+            <translation><!-- Realtor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Realtor Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Deactivate --></label>
+        <name>Deactivate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Phone --></label>
+        <name>Home_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Stay-in-Touch Request Date --></label>
+        <name>Last_Stay_in_Touch_Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Stay-in-Touch Save Date --></label>
+        <name>Last_Stay_in_Touch_Save_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing City --></label>
+        <name>Mailing_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Country --></label>
+        <name>Mailing_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing State/Province --></label>
+        <name>Mailing_State_Province__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing Street --></label>
+        <name>Mailing_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing ZIP/Postal Code --></label>
+        <name>Mailing_ZIP_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Phone --></label>
+        <name>Mobile_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Realtor --></label>
+        <name>New_Realtor__c</name>
+    </fields>
+    <fields>
+        <label><!-- No.of Leads --></label>
+        <name>No_of_Leads__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Office --></label>
+        <name>Office__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Realtor Id --></label>
+        <name>Realtor_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total no.of Leads --></label>
+        <name>Total_no_of_Leads__c</name>
+    </fields>
+    <layouts>
+        <layout>Realtor Contacts Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Mailing Address --></label>
+            <section>Mailing Address</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

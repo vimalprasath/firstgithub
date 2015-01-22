@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Object Convertor Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Object Convertor Mapping</value>
+    </caseValues>
+    <fields>
+        <label><!-- Is Static --></label>
+        <name>Is_Static__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mapping Name --></label>
+        <name>Mapping_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Api Name --></label>
+        <name>Source_Api_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Object Action --></label>
+        <name>Source_Object_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Object Name --></label>
+        <name>Source_Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Static Value --></label>
+        <name>Static_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target API Name --></label>
+        <name>Target_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Object Name --></label>
+        <name>Target_Object_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

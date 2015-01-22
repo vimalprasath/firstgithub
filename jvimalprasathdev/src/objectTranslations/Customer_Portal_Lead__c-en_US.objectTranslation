@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RB Portal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Portal Leads</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Information --></label>
+        <name>Additional_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Applicant Type --></label>
+        <name>Applicant_Type__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation><!-- Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Married Couple</masterLabel>
+            <translation><!-- Married Couple --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More than Two Individuals</masterLabel>
+            <translation><!-- More than Two Individuals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two Individuals (Not Married)</masterLabel>
+            <translation><!-- Two Individuals (Not Married) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referral ID --></label>
+        <name>ApplicationNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application number --></label>
+        <name>Application_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approximate value of your property? --></label>
+        <name>Approximate_value_of_your_property__c</name>
+    </fields>
+    <fields>
+        <label><!-- Best Contact Time --></label>
+        <name>Best_Contact_Time__c</name>
+        <picklistValues>
+            <masterLabel>01:00 PM</masterLabel>
+            <translation><!-- 01:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00 PM</masterLabel>
+            <translation><!-- 02:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00 PM</masterLabel>
+            <translation><!-- 03:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00 PM</masterLabel>
+            <translation><!-- 04:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00 PM</masterLabel>
+            <translation><!-- 05:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00 PM</masterLabel>
+            <translation><!-- 06:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00 PM</masterLabel>
+            <translation><!-- 07:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00 AM</masterLabel>
+            <translation><!-- 08:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00 PM</masterLabel>
+            <translation><!-- 08:00 PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00 AM</masterLabel>
+            <translation><!-- 09:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00 AM</masterLabel>
+            <translation><!-- 10:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00 AM</masterLabel>
+            <translation><!-- 11:00 AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00 PM</masterLabel>
+            <translation><!-- 12:00 PM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Borrower Name --></label>
+        <name>Borrower_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrowers State --></label>
+        <name>Borrower_State_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is borrower’s mailing address. --></help>
+        <label><!-- Borrowers Address 1 --></label>
+        <name>Borrowers_Address_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is borrower’s mailing address. --></help>
+        <label><!-- Borrowers Address 2 --></label>
+        <name>Borrowers_Address_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is borrower’s mailing address. --></help>
+        <label><!-- Borrowers City --></label>
+        <name>Borrowers_City__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is to specify borrower’s county. --></help>
+        <label><!-- Borrowers_Country --></label>
+        <name>Borrowers_Country__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is to specify borrower’s county. --></help>
+        <label><!-- Borrowers County --></label>
+        <name>Borrowers_County__c</name>
+    </fields>
+    <fields>
+        <label><!-- Borrowers Current Residence --></label>
+        <name>Borrowers_Current_Residence__c</name>
+        <picklistValues>
+            <masterLabel>Own</masterLabel>
+            <translation><!-- Own --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent</masterLabel>
+            <translation><!-- Rent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent Free</masterLabel>
+            <translation><!-- Rent Free --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- One of Borrowers Home Phone, Borrowers Work Phone, Borrowers Mobile Phone or  Borrowers Email is required to move the lead to a certain status. --></help>
+        <label><!-- Phone --></label>
+        <name>Borrowers_Home_Phone__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is borrower’s mailing address. --></help>
+        <label><!-- Borrowers Zip/Postal Code --></label>
+        <name>Borrowers_Zip_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Branch Name --></label>
+        <name>Branch_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Branch ID --></label>
+        <name>Branch_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Sources --></label>
+        <name>Channel_Sources__c</name>
+        <picklistValues>
+            <masterLabel>Affiliates</masterLabel>
+            <translation><!-- Affiliates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bank</masterLabel>
+            <translation><!-- Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Referral</masterLabel>
+            <translation><!-- Customer Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Campaigns</masterLabel>
+            <translation><!-- Marketing Campaigns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid Search</masterLabel>
+            <translation><!-- Paid Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous Customer</masterLabel>
+            <translation><!-- Previous Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Parties</masterLabel>
+            <translation><!-- Third Parties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Values --></label>
+        <name>Channel_Values__c</name>
+        <picklistValues>
+            <masterLabel>Associate Mortgage Discount</masterLabel>
+            <translation><!-- Associate Mortgage Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attorney</masterLabel>
+            <translation><!-- Attorney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bankrate</masterLabel>
+            <translation><!-- Bankrate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Builders</masterLabel>
+            <translation><!-- Builders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA</masterLabel>
+            <translation><!-- CPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CapitalOne.com Phone</masterLabel>
+            <translation><!-- CapitalOne.com Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CapitalOne.com Web</masterLabel>
+            <translation><!-- CapitalOne.com Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-sell Triggers</masterLabel>
+            <translation><!-- Cross-sell Triggers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Referral</masterLabel>
+            <translation><!-- Customer Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Email</masterLabel>
+            <translation><!-- Direct Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Mail</masterLabel>
+            <translation><!-- Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Warm Transfer</masterLabel>
+            <translation><!-- Direct Warm Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Advisors</masterLabel>
+            <translation><!-- Financial Advisors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google</masterLabel>
+            <translation><!-- Google --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Loans Direct</masterLabel>
+            <translation><!-- Home Loans Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC Website</masterLabel>
+            <translation><!-- MC Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation><!-- Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NCFR</masterLabel>
+            <translation><!-- NCFR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Campaign Home Equity</masterLabel>
+            <translation><!-- Outbound Campaign Home Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Campaign Mortgage</masterLabel>
+            <translation><!-- Outbound Campaign Mortgage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RB Portal</masterLabel>
+            <translation><!-- RB Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Realtors</masterLabel>
+            <translation><!-- Realtors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail MC Website</masterLabel>
+            <translation><!-- Retail MC Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention</masterLabel>
+            <translation><!-- Retention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention Triggers</masterLabel>
+            <translation><!-- Retention Triggers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention- Current Customer</masterLabel>
+            <translation><!-- Retention- Current Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention- Previous Customer</masterLabel>
+            <translation><!-- Retention- Previous Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Title Company</masterLabel>
+            <translation><!-- Title Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm Transfer</masterLabel>
+            <translation><!-- Warm Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yahoo</masterLabel>
+            <translation><!-- Yahoo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>Centralized Retail</masterLabel>
+            <translation><!-- Centralized Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Distributed Retail</masterLabel>
+            <translation><!-- Distributed Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Equity</masterLabel>
+            <translation><!-- Home Equity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closing Fees --></label>
+        <name>ClosingFees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closing Fees --></label>
+        <name>Closing_Fees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closing date --></label>
+        <name>Closing_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Lead --></label>
+        <name>Create_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Date --></label>
+        <name>Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status --></label>
+        <name>Current_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- DU Response --></label>
+        <name>DU_Response__c</name>
+        <picklistValues>
+            <masterLabel>Approved/Eligible</masterLabel>
+            <translation><!-- Approved/Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Daytime Phone --></label>
+        <name>Daytime_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- District --></label>
+        <name>District__c</name>
+    </fields>
+    <fields>
+        <help><!-- Salesforce Lead Number --></help>
+        <label><!-- Dummy Field --></label>
+        <name>Dummy_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- OPUS ID --></label>
+        <name>Empower_Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- HLR Flag --></label>
+        <name>HLR_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- How did you hear about us? --></label>
+        <name>How_did_you_hear_about_us__c</name>
+        <picklistValues>
+            <masterLabel>Ad in my Credit Card or Bank Statement</masterLabel>
+            <translation><!-- Ad in my Credit Card or Bank Statement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertising in the branch</masterLabel>
+            <translation><!-- Advertising in the branch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banner ad on the internet</masterLabel>
+            <translation><!-- Banner ad on the internet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friends or Associates</masterLabel>
+            <translation><!-- Friends or Associates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail</masterLabel>
+            <translation><!-- Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newspaper or magazine ad</masterLabel>
+            <translation><!-- Newspaper or magazine ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Call from Capital One</masterLabel>
+            <translation><!-- Phone Call from Capital One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Radio or TV ad</masterLabel>
+            <translation><!-- Radio or TV ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e-Mail</masterLabel>
+            <translation><!-- e-Mail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- OPUS ID --></label>
+        <name>LeadLoan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead/Loan # --></label>
+        <name>Lead_Loan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Number --></label>
+        <name>Lead_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Status --></label>
+        <name>Lead_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Customer Portal Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LoanStatusUpdate --></label>
+        <name>LoanStatus_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Interest --></label>
+        <name>Loan_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan Purpose --></label>
+        <name>Loan_Purpose__c</name>
+        <picklistValues>
+            <masterLabel>Purchase</masterLabel>
+            <translation><!-- Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refinance</masterLabel>
+            <translation><!-- Refinance --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Status --></label>
+        <name>Loan_Status__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loan Term --></label>
+        <name>Loan_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loan number --></label>
+        <name>Loan_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mailing address same as current address --></label>
+        <name>Mailing_address_same_as_current_address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marrital Status --></label>
+        <name>Marrital_Status__c</name>
+        <picklistValues>
+            <masterLabel>Married</masterLabel>
+            <translation><!-- Married --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single</masterLabel>
+            <translation><!-- Single --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unmarried</masterLabel>
+            <translation><!-- Unmarried --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mortgage Consultant Name --></label>
+        <name>Mortgage_Consultant_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mortgage Consultant --></label>
+        <name>Mortgage_Consultant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes Type --></label>
+        <name>Notes_Type__c</name>
+        <picklistValues>
+            <masterLabel>Called Cell – No Answer</masterLabel>
+            <translation><!-- Called Cell – No Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Cell, Left Message – No Contact</masterLabel>
+            <translation><!-- Called Cell, Left Message – No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Cell, Made Contact – Follow Up</masterLabel>
+            <translation><!-- Called Cell, Made Contact – Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, Left Message – No Contact</masterLabel>
+            <translation><!-- Called Home, Left Message – No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, Made Contact – Follow Up</masterLabel>
+            <translation><!-- Called Home, Made Contact – Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, No Answer</masterLabel>
+            <translation><!-- Called Home, No Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted – Moved to LOS</masterLabel>
+            <translation><!-- Contacted – Moved to LOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted – No Longer Interested</masterLabel>
+            <translation><!-- Contacted – No Longer Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead - assigned to queue</masterLabel>
+            <translation><!-- Lead - assigned to queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead - assigned to user</masterLabel>
+            <translation><!-- Lead - assigned to user --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prequal Letter Sent (Purchase Offer Made)</masterLabel>
+            <translation><!-- Prequal Letter Sent (Purchase Offer Made) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RB Portal Notes</masterLabel>
+            <translation><!-- RB Portal Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refinance Offer Made</masterLabel>
+            <translation><!-- Refinance Offer Made --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Occupancy Code --></label>
+        <name>Occupancy_Code__c</name>
+        <picklistValues>
+            <masterLabel>Investment Property</masterLabel>
+            <translation><!-- Investment Property --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner Occupied</masterLabel>
+            <translation><!-- Owner Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second Home</masterLabel>
+            <translation><!-- Second Home --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone number --></label>
+        <name>Phone_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Contact Method --></label>
+        <name>Preferred_Contact_Method__c</name>
+        <picklistValues>
+            <masterLabel>Home Phone</masterLabel>
+            <translation><!-- Home Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Phone</masterLabel>
+            <translation><!-- Mobile Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work Phone</masterLabel>
+            <translation><!-- Work Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Address --></label>
+        <name>Property_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is required. --></help>
+        <label><!-- Property State --></label>
+        <name>Property_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Type --></label>
+        <name>Property_Type__c</name>
+        <picklistValues>
+            <masterLabel>2 Unit</masterLabel>
+            <translation><!-- 2 Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Unit</masterLabel>
+            <translation><!-- 3 Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Unit</masterLabel>
+            <translation><!-- 4 Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-op</masterLabel>
+            <translation><!-- Co-op --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hi-Rise Condominium</masterLabel>
+            <translation><!-- Hi-Rise Condominium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low-Rise Condominium</masterLabel>
+            <translation><!-- Low-Rise Condominium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PUD</masterLabel>
+            <translation><!-- PUD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single-Family Home Attached</masterLabel>
+            <translation><!-- Single-Family Home Attached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single-Family Home Detached</masterLabel>
+            <translation><!-- Single-Family Home Detached --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Use --></label>
+        <name>Property_Use__c</name>
+        <picklistValues>
+            <masterLabel>Investment Property</masterLabel>
+            <translation><!-- Investment Property --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary</masterLabel>
+            <translation><!-- Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vacation or Second Home</masterLabel>
+            <translation><!-- Vacation or Second Home --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RB Branch --></label>
+        <name>RB_Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- RB Cost Center --></label>
+        <name>RB_Cost_Center__c</name>
+    </fields>
+    <fields>
+        <label><!-- RB District --></label>
+        <name>RB_District__c</name>
+    </fields>
+    <fields>
+        <label><!-- RB Region --></label>
+        <name>RB_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Opportunity --></label>
+        <name>Related_Opportunity__c</name>
+        <relationshipLabel><!-- Customer Portal Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RelationShip Banker EID --></label>
+        <name>RelationShip_Banker_EID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Price --></label>
+        <name>Sales_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted --></label>
+        <name>Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted --></label>
+        <name>Submitted_formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Zone --></label>
+        <name>Time_Zone__c</name>
+        <picklistValues>
+            <masterLabel>CST</masterLabel>
+            <translation><!-- CST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EST</masterLabel>
+            <translation><!-- EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MST</masterLabel>
+            <translation><!-- MST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PST</masterLabel>
+            <translation><!-- PST --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Including cash back amount --></help>
+        <label><!-- Loan Amount --></label>
+        <name>Total_amount_finance_needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transfer To HLR --></label>
+        <name>Transfer_To_HLR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Where is the property located? --></label>
+        <name>property_located__c</name>
+    </fields>
+    <layouts>
+        <layout>Customer Portal Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Borrower Details --></label>
+            <section>Borrower Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Details --></label>
+            <section>Lead Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Portal layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Borrower Details --></label>
+            <section>Borrower Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Details --></label>
+            <section>Lead Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- RB Portal --></label>
+        <name>RB_Portal</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

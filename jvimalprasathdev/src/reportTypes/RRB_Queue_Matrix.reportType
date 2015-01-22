@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>RRB_Queue_Matrix__c</baseObject>
+    <category>other</category>
+    <deployed>false</deployed>
+    <description>RRB Queue Matrxi</description>
+    <label>RRB Queue Matrix</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Current_queue_proficiency_level__c</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Next_assigned_user__c</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Round_robin_status__c</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Round_robin_time__c</field>
+            <table>RRB_Queue_Matrix__c</table>
+        </columns>
+        <masterLabel>RRB Queue Matrix</masterLabel>
+    </sections>
+</ReportType>

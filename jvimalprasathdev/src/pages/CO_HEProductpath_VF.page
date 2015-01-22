@@ -1,0 +1,57 @@
+<apex:page controller="CO_CustomerAssessmentController" showHeader="false" sidebar="false">
+<link href="default.css" rel="stylesheet" type="text/css"/>
+ <link href="https://www.capitalone.com/assets/css/global/default.css" rel="stylesheet" type="text/css"/>
+ <link href="https://www.capitalone.com/assets/css/global/print.css" rel="stylesheet" media="print" type="text/css"  />
+ <link href="https://www.capitalone.com/assets/css/global/supernav.css" rel="stylesheet" type="text/css" />
+<script>
+function CustomerAssessment()
+{
+document.location.href="Consumer_Portal2.html";
+}
+</script>
+<body>
+<div role="banner" id="header"> 
+
+<div class="cap-one-logo-sprite"> 
+ <h1>
+  <a href="https://www.capitalone.com/" title="Back to Capital One home">
+  <img class="logo-cap-one" src="https://www.capitalone.com/assets/img/global/logo/sprite/header-logo.ns.png" title="Capital One® logo with a link to the home page" alt="Capital One logo" height="187" width="241"/>
+  </a>
+ </h1> 
+</div>
+</div>
+<span style="background-color:#DDDDDD;padding-left:760px;padding-right:800px;">
+<a href="MyProfilePage" style="align:right">Edit&nbsp;&nbsp;Profile</a>&nbsp;|&nbsp;<a href="Sign Out">Sign&nbsp;Out</a>
+</span>
+
+
+<span style="background-color:#cccccc;padding-left:30px;padding-right:615px;font-size:15px;padding-top:1px;"><b style="color:darkblue;">Product&nbsp;&nbsp;Path&nbsp;&nbsp;Recommendations</b></span>
+
+
+
+<p style="padding-left:30px">
+Based on the answers to the Customer Assessment questions, the recommended product path is  <span style="background-color:#cccccc"> <b> Home Equity</b> </span>
+</p>
+<p style="padding-left:30px">
+Click Close to exit.
+</p>
+<p style="padding-left:30px">
+</p>
+
+
+<apex:form >
+<div id="b1" style="position:absolute;bottom:0; right:450px;height:25px;float:right">
+  
+    <apex:commandButton action="{!toCancel}" style="float:right;" value="Close" id="toHEPage"/>
+    <apex:commandButton action="{!toREPrevious}" style="float:right;" value="Previous" id="toPrevious"/> 
+</div>
+    <div id="Cancel" style="display:block;align:right;padding-left:550px;padding-top:50px;">
+      <span style="position: absolute; bottom: 0; right:460px;padding-left:150px;padding-right:800px;height:25px">
+          <!--<apex:commandButton action="{!toCancel}" value="Cancel" id="toReferralPipeline" />-->
+          
+      </span>    
+</div>
+</apex:form>
+
+</body>
+</apex:page>

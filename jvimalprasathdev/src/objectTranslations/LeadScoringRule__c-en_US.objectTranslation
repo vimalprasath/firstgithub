@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lead Scoring Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lead Scoring Rules</value>
+    </caseValues>
+    <fields>
+        <help><!-- In-Active rules are NOT evaluated when a lead or campaign member is saved. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Lead Scoring Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Field Label --></label>
+        <name>Field_Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation><!-- contains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>does not contain</masterLabel>
+            <translation><!-- does not contain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation><!-- equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equal</masterLabel>
+            <translation><!-- greater or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation><!-- greater than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equal</masterLabel>
+            <translation><!-- less or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equal to</masterLabel>
+            <translation><!-- not equal to --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation><!-- starts with --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Points --></label>
+        <name>Score_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Campaign Member</masterLabel>
+            <translation><!-- Campaign Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You can only use 80 characters for &apos;Value&apos;.  Please shorten your criteria before saving again. --></errorMessage>
+        <name>Max_length_80_Char</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Unfortunately, you cannot use a comma or semicolon for either multiple values or numbers. Please remove any commas and semicolons, and if desired, create a second rule for additional criteria. --></errorMessage>
+        <name>No_Commas</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot create a rule with Field Name referencing Lead Score, Campaign Score, or Total Score.  Please change the field name for this rule. --></errorMessage>
+        <name>No_LeadScore_CampaignScore_TotalScore</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select a Type such as Lead or Campaign Member --></errorMessage>
+        <name>No_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a value for Points.  
+
+Note you can enter negative values to decrease the lead score if criteria is met. --></errorMessage>
+        <name>NullPoints</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select a field, operator, and value before saving.  Blank or null values are not supported as valid values. --></errorMessage>
+        <name>Rule_field_operator_are_valid</name>
+    </validationRules>
+</CustomObjectTranslation>

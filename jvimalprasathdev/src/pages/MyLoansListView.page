@@ -1,0 +1,187 @@
+<apex:page Controller="myLoansListViewController"  showHeader="true" sidebar="true" name="My Loans" id="l">
+
+
+<script src="{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/js/jquery.js')}"></script>
+<script src="{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/js/jquery.dataTables.js')}"></script>
+
+<script type="text/javascript" charset="utf-8">
+ $(document).ready(function() { 
+    var v = document.getElementById('{!$Component.myform.Searchblock.TextId}').value;
+    var v2 = document.getElementById('{!$Component.myform.Searchblock.StatusId}').value;
+    var v4 = document.getElementById('{!$Component.myform.Searchblock.LoanPurposeId}').value;
+    var v3 = document.getElementById('{!$Component.myform.Searchblock.OwnerId}').value;
+    if ((v == '' || v == null)&&(v2 == '' || v2 == null || v2 == 'None')&& (v4 == '' || v4 == null || v4 == 'None') ) {
+  
+    $('#SearchFilter').hide();
+    $('#toggleminus').hide();
+    $('#slick-toggle').click(function() {
+    $('#SearchFilter').toggle(1);
+    $('#toggleplus').toggle(1);
+    $('#toggleminus').toggle(1);
+    return false;
+     });
+     }
+    else
+     {
+  
+     $('#toggleplus').hide();
+     $('#slick-toggle').click(function() {
+     $('#SearchFilter').toggle(200);
+     $('#toggleplus').toggle(1);
+     $('#toggleminus').toggle(1);
+     return false;
+     })
+     }
+ 
+ } );
+ </script>
+ 
+ <body>
+ 
+
+    <apex:form id="Myform" >
+        <apex:pageMessages />
+      
+        <style>
+            .actionColumn{ display: none; visibility:hidden;}
+            .bFilterView{ display: none; visibility:hidden;}
+            .bPageBlock.brandSecondaryBrd.secondaryPalette{ width: 100% !important;}
+            .bNext{ width: 100% !important;}
+        </style>
+       <apex:pageblock id="Searchblock" >
+       
+         <center>
+              <apex:commandButton action="{!Refresh}" value="Refresh"/>
+            </center>
+         
+         <span id="slick-toggle"><a href="#" style="color:#5C5C5C"><span id="toggleplus"><b>+</b></span><span id="toggleminus"><b>-</b></span>Show/Hide Search Filters</a></span>
+
+         
+          <div id="SearchFilter" Style="font-size:12px;marging-top:20px;width:100%;">
+                 <b>Lead Name</b>
+                 <apex:inputText id="TextId" value="{!TName}" label="Enter Name"/>
+                 <b>Status</b>
+              <apex:selectList id="StatusId" value="{!Selectedstatus}" size="1" style="font-size: 12px;">
+                 <apex:selectOptions value="{!statusoptions}" />
+             </apex:selectList>
+                                
+             <b>Loan Purpose</b>
+
+             <apex:selectList id="LoanPurposeId" value="{!Selectedloanpurpose}" size="1" style="font-size: 12px;"> 
+                        <apex:selectOptions value="{!loanpurposeoptions}" />
+             </apex:selectList>
+             
+             <apex:selectList id="OwnerId" value="{!SelectedU}" size="1" style="font-size: 12px;"><b>Owner</b>
+                 <apex:selectOptions value="{!UserListGS}" />
+             </apex:selectList> 
+             &nbsp;&nbsp;     
+             <apex:commandButton value="Submit" style="font-size: 12px;" action="{!goLeads}"/>
+             </div>
+             </apex:pageblock>
+             <apex:pageblock id="SearchViewBlock" rendered="{!searchflag}" >
+            
+             <apex:outputpanel id="mainpanel">                 
+                     <apex:pageblocktable value="{!filteredLead2}" var="PLead" rendered="{!searchflag}"> 
+                          <apex:column >
+                              <apex:facet name="header">Name  
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Name{!IF(sortExpression=='Name',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                               <a href="/{!PLead.id}"><apex:outputField value="{!PLead.Name}"/></a>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Email
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Email{!IF(sortExpression=='Email',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Email" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Email}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Lead Status  
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Lead Status{!IF(sortExpression=='Status',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Status" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Status}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Rate Exp. 
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Rate Exp.{!IF(sortExpression=='Rate_Lock_Expiration_Date__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Rate_Lock_Expiration_Date__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Rate_Lock_Expiration_Date__c}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Loan Purpose
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Loan Purpose{!IF(sortExpression=='Loan_Purpose__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Loan_Purpose__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Loan_Purpose__c}"/>
+                          </apex:column>
+                          
+                          <apex:column >
+                              <apex:facet name="header">OPUS ID
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="OPUS ID{!IF(sortExpression=='Empower_Lead_ID__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Empower_Lead_ID__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <a href="https://{!$Label.View_In_OPUS}/SolutionsFinder/index/welcome.vm?initialRouting=salesForceSolutionsFinder&applicationView=RETAIL_CONSULTANT_CENTRALIZED&lead={!PLead.Empower_Lead_ID__c}&&mloid={!$User.NMLS_ID__c}&operator={!$User.Alias}" target="_blank"><apex:outputField value="{!PLead.Empower_Lead_ID__c}"/></a>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Owner 
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Owner {!IF(sortExpression=='Owner.name',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Owner.name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Owner.Name}"/>
+                          </apex:column>
+                          
+                           
+                          
+                          
+                           <apex:column >
+                              <apex:facet name="header">Created Date  
+                                  <apex:commandLink action="{!colmnsorting}" status="loading" rerender="mainpanel" value="Created Date{!IF(sortExpression=='createddate',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="createddate" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.createddate}"/>
+                          </apex:column>
+
+                     </apex:pageblocktable>
+             </apex:outputpanel>
+             <!--</apex:outputpanel>-->
+             <apex:pageBlockButtons location="bottom" id="myButtons">
+               <!--<apex:outputPanel >-->
+                    <apex:commandButton action="{!Beginning}" title="Beginning" value="<<" disabled="{!disablePrevious}" reRender="SearchViewBlock,myButtons"/>
+                    <apex:commandButton action="{!Previous}" title="Previous" value="<" disabled="{!disablePrevious}" reRender="SearchViewBlock,myButtons"/>        
+                    <apex:commandButton action="{!Next}" title="Next" value=">" disabled="{!disableNext}" reRender="SearchViewBlock,myButtons"/>
+                    <apex:commandButton action="{!End}" title="End" value=">>" disabled="{!disableEnd}" reRender="SearchViewBlock,myButtons"/>        
+              <!-- </apex:outputPanel>-->
+               </apex:pageBlockButtons>
+          </apex:pageblock>
+          
+         
+          <apex:actionStatus id="loading">
+              <apex:facet name="start">
+                   <div class="waitingSearchDiv" id="l_loading" style="background-color: #fbfbfb; height:300%; opacity:0.75; width:120%; filter: alpha(opacity = 50);"> 
+                       <div class="waitingHolder" style="top:400px; width: 100px;">
+                           <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                           <span class="waitingDescription">Please Wait...</span>
+                       </div>
+                   </div> 
+             </apex:facet>
+         </apex:actionStatus> 
+         </apex:form>  
+     <apex:enhancedList type="Lead" customizable="false" rowsPerPage="25"  height="500" rendered="{!hide}" listId="{!ListViewURLID}"/>
+    </body> 
+</apex:page>

@@ -1,0 +1,89 @@
+<apex:component >
+<html lang="en" xml:lang="en">
+<head>
+  <title>Capital One : Solutions Finder</title>
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="https://home.capitalone360.com/css/home/styles.cshtml?css=sofi/solutionsfinder" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://home.capitalone360.com/css/solutionsfinder_email.css" />
+  
+</head>
+<body>
+
+ <div id="container" class="promotion">
+  
+  <div id="header">
+      <h1><img src="https://images.capitalone360.com/images/popup-capitalone-logo.png" width='143' height='50' alt='Capital One' style='margin-top: 12px;' /></h1>
+      <h2 id="app_title" class="pHide">       Home Loans  : Solutions Finder</h2>
+  </div>
+  
+  <div id="status" class="pHide">
+      <ol id="status_bar">
+         <li class="first ">
+            <span>1. About Yourself</span> <span class="offscreen">Step 1 of 3,  inactive</span>
+         </li>
+        <li class="">
+            <span>2. About the Property</span> <span class="offscreen">Step 2 of 3,  inactive</span>
+        </li>
+        <li class="last ">
+            <span>3. Your Solutions</span> <span class="offscreen">Step 3 of 3,  inactive</span>
+        </li>
+      </ol>
+  </div>
+    
+  <div id="welcome" class="default fall"><!-- welcome -->
+      <div id="welcomeContent">
+       
+       
+        <h3>Welcome,</h3>
+        <br/><br/><p>Whether you're purchasing or refinancing a home, you'll save money with a Home Loan from Capital One. With 
+            this tool, you'll be able to get your custom rate quote and find the loan that best fits your needs.</p>
+         
+         <div style="float:left;width:400px">
+           <!-- <a href="#" class="button large blue left jqcl_loanTypes" value="purchase" id="purchase"><span>I am purchasing</span></a> --> 
+           <!-- <a href="#" class="button large blue left clearfix jqcl_loanTypes" value="refinance" id="refinance"><span>I am refinancing</span></a>-->  
+           <apex:commandbutton value="I am purchasing" style="line-height: 30px; font-family: Arial;padding: 0px 8px 0px 18px;float: left; background: transparent url('https://images.capitalone360.com/css/backgrounds/solutionsfinder/button_blue_l.png?v=848149') no-repeat top left; display: block; color: #fff; text-decoration: none;"/>
+           <apex:commandbutton value="I am refinancing" style="line-height: 30px; font-family: Arial;padding: 0px 8px 0px 18px; float: left;background: transparent url('https://images.capitalone360.com/css/backgrounds/solutionsfinder/button_blue_l.png?v=848149') no-repeat top left; display: block; color: #fff; text-decoration: none;"/>
+           
+         </div>
+                
+        <div style="float:left;width:400px;margin:10px;">
+            <a id="loadSaved" href="#">Load a previously saved solution</a>
+        </div>
+        
+        <div style="font-size: 80%;">
+            <img src="https://images.capitalone360.com/images/secure/solutionsfinder/promo/CC_2013_Logo_tag_gif.jpg" width='128' height='58' alt='$1,000 OFF' style='float: left;' />
+            <p style="margin: 0 10px 10px 140px; padding-top: 5px;">
+              <strong>Knock <span style="color:#A12830">$1,000 off your closing costs</span> when you close on your Purchase or Refinance loan with us. Limited time only.</strong>
+            </p>
+        </div>
+        
+       
+      </div>
+  </div>
+        
+  <div id="footer" class="pHide">
+  
+     <p class="f12 pt5 center black">Questions? Talk to a Mortgage Specialist at <strong>1-855-238-8769 </strong> from 8 AM to 8 PM, 7 days a week.</p>
+     <BR/>
+     
+     <p class="f11 pt5 center #777777">Banking, Credit Card, Auto Finance and Home Loan products and services are offered by the Capital One family of companies,<br/>
+        including Capital One Bank (USA), N.A. and Capital One, N.A., NMLS ID 453156, Members FDIC. <br/><br/> 
+      
+       <strong>Securities, Credit Card, Auto Finance and Home Loan products are: Not FDIC insured &bull; Not bank guaranteed &bull; May lose value </strong><br/> <br/>
+       <strong>&copy; 2014 Capital One</strong>.  All rights reserved.
+     </p>          
+     <BR/>
+     
+     <p class="f11 pt5 center #777777"> 
+        Capital One, N.A. will pay closing costs up to $1,000. Certain restrictions apply. Promotion may not be used towards points, per diem interest or
+         tax-deductible fees, such as property taxes and private mortgage insurance (PMI). Any portion of the promotional amount not used towards closing 
+         costs will be forfeited. Promotion may be limited by investor/insurer guidelines for each loan type. Advertised discount not available on 
+         home equity loans or home equity lines of credit. This offer is non-transferable and cannot be combined with any other offer.                      
+     </p>
+         
+  </div>    
+ </div>
+
+</body>
+</html>
+</apex:component>

@@ -1,0 +1,21 @@
+<apex:page standardController="Realtor_Contact_Management__c" recordSetVar="Realtor_Management__c" extensions="CO_RealtorManagement_CL" >
+<apex:form title="Add Realtor">
+    <apex:pageMessages />
+    <apex:pageBlock title="Add Realtor">
+         <apex:pageBlockButtons >
+             <apex:commandButton action="{!SaveRelMgt}" value="Save"/>
+             <apex:commandButton action="{!Cancel}" value="Cancel"/>     
+         </apex:pageBlockButtons>         
+         <apex:pageBlockSection showHeader="false" columns="1" id="block1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Lead Name" />
+                <apex:outputField value="{!RelMgt.Lead__c}" />             
+            </apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Realtor"/>
+                <apex:inputField value="{!RelMgt.Realtor_Contact__c}"/>                
+            </apex:pageBlockSectionItem>                        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

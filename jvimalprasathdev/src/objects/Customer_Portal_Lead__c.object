@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Additional_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Information</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Applicant_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Married Couple</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Two Individuals (Not Married)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>More than Two Individuals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ApplicationNumber__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead_Loan__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Referral ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Application number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approximate_value_of_your_property__c</fullName>
+        <externalId>false</externalId>
+        <label>Approximate value of your property?</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Best_Contact_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Best Contact Time</label>
+        <picklist>
+            <controllingField>Time_Zone__c</controllingField>
+            <picklistValues>
+                <fullName>08:00 AM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>09:00 AM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00 AM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00 AM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>01:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>02:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>03:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>04:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>05:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>06:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>07:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>08:00 PM</fullName>
+                <controllingFieldValues>CST</controllingFieldValues>
+                <controllingFieldValues>EST</controllingFieldValues>
+                <controllingFieldValues>MST</controllingFieldValues>
+                <controllingFieldValues>PST</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Borrower_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Last_Name__c +&apos;,&apos;+ First_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Borrower Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrower_State_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrowers State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Address_1__c</fullName>
+        <description>This is to specify the first line of borrower’s address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is borrower’s mailing address.</inlineHelpText>
+        <label>Borrowers Address 1</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Address_2__c</fullName>
+        <description>This is to specify the second line of borrower’s address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is borrower’s mailing address.</inlineHelpText>
+        <label>Borrowers Address 2</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_City__c</fullName>
+        <description>This is to specify borrower’s city</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is borrower’s mailing address.</inlineHelpText>
+        <label>Borrowers City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Country__c</fullName>
+        <description>This is to specify borrower’s county.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is to specify borrower’s county.</inlineHelpText>
+        <label>Borrowers_Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_County__c</fullName>
+        <description>This is to specify borrower’s county.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is to specify borrower’s county.</inlineHelpText>
+        <label>Borrowers County</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Current_Residence__c</fullName>
+        <externalId>false</externalId>
+        <label>Borrowers Current Residence</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Own</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rent Free</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Home_Phone__c</fullName>
+        <description>This is to specify borrower’s home phone.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>One of Borrowers Home Phone, Borrowers Work Phone, Borrowers Mobile Phone or  Borrowers Email is required to move the lead to a certain status.</inlineHelpText>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Borrowers_Zip_Postal_Code__c</fullName>
+        <description>This is to specify borrower’s zip.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is borrower’s mailing address.</inlineHelpText>
+        <label>Borrowers Zip/Postal Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Branch_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Branch_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Sources__c</fullName>
+        <description>This is to specify the channel sources from which the lead was generated. This pick list is to specify the high-level category. The second pick list needs to be used to further drill down to channel source.</description>
+        <externalId>false</externalId>
+        <label>Channel Sources</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing Campaigns</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third Parties</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Previous Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Affiliates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paid Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Values__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Values</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bankrate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RB Portal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Google</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yahoo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outbound Campaign Mortgage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outbound Campaign Home Equity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cross-sell Triggers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retention Triggers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CapitalOne.com Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CapitalOne.com Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Realtors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Builders</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Advisors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Title Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Associate Mortgage Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retention- Current Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warm Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retention- Previous Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Warm Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loans Direct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NCFR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail MC Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <description>This is to specify the channel from which the lead was generated.</description>
+        <externalId>false</externalId>
+        <label>Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Centralized Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distributed Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Equity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ClosingFees__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead__r.Closing_Fees__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Closing Fees</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Fees</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing date</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Create_Lead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Create Lead</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Application Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Current_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((ISBLANK( Related_Opportunity__r.OwnerId )),(IF( Lead__r.RecordType.Name != &apos;IsConverted&apos;,
+((IF(AND(( Lead__r.Transfer_To_HLR__c = true), OR(Lead__r.Empower_Lead_ID__c = null, CONTAINS(Lead__r.Empower_Lead_ID__c,&apos;D&apos;))), &apos;Transfer to HLR&apos;,IF(AND(NOT(ISPICKVAL(Lead__r.Status,&apos;Transfer To HLR&apos;)), OR(Lead__r.Empower_Lead_ID__c = null, CONTAINS(Lead__r.Empower_Lead_ID__c,&apos;D&apos;))),&apos;Not Application&apos;,IF(AND(Lead__r.Empower_Lead_ID__c &lt;&gt; null,CONTAINS(Lead__r.Empower_Lead_ID__c,&apos;E&apos;), Lead__r.Loan_Update_Date__c &gt;= DATEVALUE(&apos;2013-11-06&apos;) ),TEXT(Lead__r.Status) ,IF(AND(Lead__r.Empower_Lead_ID__c &lt;&gt; null, LoanStatus_Update__c = null,CONTAINS(Lead__r.Empower_Lead_ID__c,&apos;E&apos;)), &apos;In Application&apos;,IF(AND(Lead__r.Empower_Lead_ID__c &lt;&gt; null, CONTAINS(Lead__r.Empower_Lead_ID__c,&apos;E&apos;)), &apos;In Application&apos;,&apos;Error&apos;)))))) ),
+(IF(AND( (Lead__r.Related_Opportunity__r.Transfer_to_HLR__c = true),OR( Lead__r.Related_Opportunity__r.Empower_Lead_ID__c = null, CONTAINS(Lead__r.Related_Opportunity__r.Empower_Lead_ID__c ,&apos;D&apos;))),&apos;Transfer to HLR&apos;,IF(OR (Lead__r.Related_Opportunity__r.Empower_Lead_ID__c = null, CONTAINS(Lead__r.Related_Opportunity__r.Empower_Lead_ID__c ,&apos;D&apos;)),&apos;Not Application&apos;,IF(OR (Lead__r.Related_Opportunity__r.Empower_Lead_ID__c &lt;&gt; null, CONTAINS(Lead__r.Related_Opportunity__r.Empower_Lead_ID__c ,&apos;E&apos;)), ( Text(Lead__r.Related_Opportunity__r.Loan_Status__c )),&apos;Error&apos; ))))))
+,(IF(AND( (Related_Opportunity__r.Transfer_to_HLR__c = true),OR( Related_Opportunity__r.Empower_Lead_ID__c = null, CONTAINS(Related_Opportunity__r.Empower_Lead_ID__c,&apos;D&apos;))),&apos;Transfer to HLR&apos;,IF(OR (Related_Opportunity__r.Empower_Lead_ID__c = null, CONTAINS(Related_Opportunity__r.Empower_Lead_ID__c,&apos;D&apos;)),&apos;In Application&apos;,IF(OR (Related_Opportunity__r.Empower_Lead_ID__c &lt;&gt; null, CONTAINS(Related_Opportunity__r.Empower_Lead_ID__c,&apos;E&apos;)), Text(( Related_Opportunity__r.Loan_Status__c )),&apos;Error&apos; )))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DU_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>DU Response</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved/Eligible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Daytime_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Daytime Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>District__c</fullName>
+        <externalId>false</externalId>
+        <label>District</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dummy_Field__c</fullName>
+        <description>Pulls the Salesforce Lead Number from the Lead object which is related to the record</description>
+        <externalId>false</externalId>
+        <formula>IF( Lead__r.Transfer_To_HLR__c &lt;&gt; true, Empower_Lead_ID__c, Application_number__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Salesforce Lead Number</inlineHelpText>
+        <label>Dummy Field</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Empower_Lead_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>OPUS ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HLR_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead__r.HLR_Flag__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HLR Flag</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_did_you_hear_about_us__c</fullName>
+        <externalId>false</externalId>
+        <label>How did you hear about us?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Mail</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ad in my Credit Card or Bank Statement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>e-Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banner ad on the internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Call from Capital One</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertising in the branch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio or TV ad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Newspaper or magazine ad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friends or Associates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Lead__r.Loan_Interest__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Interest Rate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadLoan__c</fullName>
+        <description>Pulls the OPUS Id  from the Lead / Opportunity object which is related to the record</description>
+        <externalId>false</externalId>
+        <formula>IF( Lead__r.Transfer_To_HLR__c &lt;&gt; true, Empower_Lead_ID__c, Application_number__c)</formula>
+        <label>OPUS ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Loan__c</fullName>
+        <displayFormat>PL-{000000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Lead/Loan #</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Number__c</fullName>
+        <description>RB Portal view is the Lead Number (Salesforce Lead Number)</description>
+        <externalId>false</externalId>
+        <formula>Lead__r.Salesforce_Lead_Number__c</formula>
+        <label>Lead Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Status</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Customer Portal Leads</relationshipLabel>
+        <relationshipName>Customer_Portal_Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LoanStatus_Update__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead__r.Loan_Update_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LoanStatusUpdate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Interest</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Purpose</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Term</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mailing_address_same_as_current_address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mailing address same as current address</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marrital_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Marrital Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unmarried</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Married</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Single</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Mortgage_Consultant_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Mortgage Consultant Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mortgage_Consultant__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( (ISBLANK(Related_Opportunity__c) ) ,(Lead__r.Owner:User.FirstName&amp;&quot; &quot;&amp;Lead__r.Owner:User.LastName),(Related_Opportunity__r.Owner.FirstName&amp;&quot; &quot; &amp;Related_Opportunity__r.Owner.LastName))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mortgage Consultant</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>180</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Called Home, Left Message – No Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Home, Made Contact – Follow Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Home, No Answer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Cell, Left Message – No Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Cell, Made Contact – Follow Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Called Cell – No Answer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refinance Offer Made</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prequal Letter Sent (Purchase Offer Made)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contacted – Moved to LOS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contacted – No Longer Interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead - assigned to queue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead - assigned to user</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RB Portal Notes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupancy Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Owner Occupied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Second Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Investment Property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Phone_number__c</fullName>
+        <externalId>false</externalId>
+        <formula>MID(Borrowers_Home_Phone__c ,2, 3) &amp; MID(Borrowers_Home_Phone__c,7,3) &amp; MID(Borrowers_Home_Phone__c,11,4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Preferred_Contact_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Contact Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Property_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Borrowers_Address_1__c +&apos;,&apos;+ Borrowers_Address_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <description>This is to specify Property State.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is required.</inlineHelpText>
+        <label>Property State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Single-Family Home Attached</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Single-Family Home Detached</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hi-Rise Condominium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low-Rise Condominium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Co-op</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PUD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Property_Use__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vacation or Second Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Investment Property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RB_Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>RB Branch</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RB_Cost_Center__c</fullName>
+        <externalId>false</externalId>
+        <label>RB Cost Center</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RB_District__c</fullName>
+        <externalId>false</externalId>
+        <label>RB District</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RB_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>RB Region</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Customer Portal Leads</relationshipLabel>
+        <relationshipName>Customer_Portal_Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RelationShip_Banker_EID__c</fullName>
+        <externalId>false</externalId>
+        <label>RelationShip Banker EID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Price__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Submitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitted</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Create_Lead__c = true,Lead__r.Submitted__c,&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Submitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suffix__c</fullName>
+        <externalId>false</externalId>
+        <label>Suffix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>Lead__r.LoanTerm__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Zone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_amount_finance_needed__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Including cash back amount</inlineHelpText>
+        <label>Loan Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transfer_To_HLR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Transfer To HLR</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>property_located__c</fullName>
+        <externalId>false</externalId>
+        <label>Where is the property located?</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>RB Portal</label>
+    <listViews>
+        <fullName>RB_Lead_List</fullName>
+        <columns>Lead_Number__c</columns>
+        <columns>LeadLoan__c</columns>
+        <columns>Borrower_Name__c</columns>
+        <columns>Total_amount_finance_needed__c</columns>
+        <columns>Borrowers_Home_Phone__c</columns>
+        <columns>Email__c</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Current_Status__c</columns>
+        <columns>Interest_Rate__c</columns>
+        <columns>ClosingFees__c</columns>
+        <columns>Mortgage_Consultant__c</columns>
+        <columns>Closing_date__c</columns>
+        <columns>Created_Date__c</columns>
+        <columns>Submitted_formula__c</columns>
+        <columns>HLR_Flag__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>RB Lead List</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CP-{0000000000}</displayFormat>
+        <label>Customer Lead  Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Customer Portal Leads</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>RB_Portal</fullName>
+        <active>true</active>
+        <label>RB Portal</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Individual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Married Couple</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More than Two Individuals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Two Individuals %28Not Married%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Best_Contact_Time__c</picklist>
+            <values>
+                <fullName>01%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Borrowers_Current_Residence__c</picklist>
+            <values>
+                <fullName>Own</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Free</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Channel_Sources__c</picklist>
+            <values>
+                <fullName>Affiliates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Campaigns</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Previous Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third Parties</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Channel_Values__c</picklist>
+            <values>
+                <fullName>Associate Mortgage Discount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Attorney</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bankrate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builders</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CapitalOne%2Ecom Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CapitalOne%2Ecom Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cross-sell Triggers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Warm Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Advisors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Google</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loans Direct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MC Website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCFR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Campaign Home Equity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Campaign Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RB Portal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Realtors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail MC Website</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention Triggers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention- Current Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retention- Previous Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Title Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yahoo</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Channel__c</picklist>
+            <values>
+                <fullName>Centralized Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributed Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Equity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DU_Response__c</picklist>
+            <values>
+                <fullName>Approved%2FEligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_did_you_hear_about_us__c</picklist>
+            <values>
+                <fullName>Ad in my Credit Card or Bank Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertising in the branch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner ad on the internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Friends or Associates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Newspaper or magazine ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call from Capital One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Radio or TV ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>e-Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Purpose__c</picklist>
+            <values>
+                <fullName>Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Status__c</picklist>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Marrital_Status__c</picklist>
+            <values>
+                <fullName>Married</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Unmarried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Notes_Type__c</picklist>
+            <values>
+                <fullName>Called Cell %E2%80%93 No Answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Cell%2C Left Message %E2%80%93 No Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Cell%2C Made Contact %E2%80%93 Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Home%2C Left Message %E2%80%93 No Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Home%2C Made Contact %E2%80%93 Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Home%2C No Answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted %E2%80%93 Moved to LOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted %E2%80%93 No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead - assigned to queue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead - assigned to user</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prequal Letter Sent %28Purchase Offer Made%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RB Portal Notes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance Offer Made</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupancy_Code__c</picklist>
+            <values>
+                <fullName>Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Owner Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Home</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Contact_Method__c</picklist>
+            <values>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Work Phone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Type__c</picklist>
+            <values>
+                <fullName>2 Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Co-op</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hi-Rise Condominium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low-Rise Condominium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PUD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single-Family Home Attached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single-Family Home Detached</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Use__c</picklist>
+            <values>
+                <fullName>Investment Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacation or Second Home</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Time_Zone__c</picklist>
+            <values>
+                <fullName>CST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PST</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>New</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,26 @@
+<apex:page controller="CO_SearchRealtorContacts_CL">
+    <apex:form >
+        <apex:pagemessages />
+        <apex:pageBlock title="Realtor Contacts Search">
+        <apex:outputText ><b>Enter Zip/Postal code :</b></apex:outputText>&nbsp;&nbsp;
+            <apex:inputText label="Enter Zip/Postal code" title="Enter Zip/Postal code" value="{!zipcode}"/>&nbsp;&nbsp;
+            <apex:commandButton value="Search" id="Search" action="{!findRealtorCons}"/>
+            <apex:pageBlocksection columns="1">
+            <apex:outputpanel rendered="{!showtable}"><br/>
+            <apex:pageBlockTable value="{!VFContacts}" var="p">
+                <apex:column headerValue="Contact Name" >
+                    <apex:outputText value="{!p.con.name}"/>
+                </apex:column>
+                <apex:column headerValue="Phone" value="{!p.con.Phone__c}"/>
+                <apex:column headerValue="Email" value="{!p.con.Email__c}"/>
+                <apex:column headerValue="No of Leads" value="{!p.con.Total_no_of_Leads__c}"/>
+                <apex:column headerValue="Createddate" value="{!p.createddate}"/>
+            </apex:pageBlockTable>
+            </apex:outputpanel>
+                <apex:outputpanel rendered="{!showmesg}">
+                <br/><b>{!messg}</b><br/>
+                </apex:outputpanel>
+            </Apex:pageBlocksection>
+        </apex:pageBlock>
+    </apex:form>  
+</apex:page>

@@ -1,0 +1,27 @@
+<!--
+* @Created By : Leena (Wipro)
+* @Last Modified By : Leena (Wipro)
+* @description : This Page creates a new contact management record and saves it in database
+*                 
+-->
+<apex:page standardController="Contact_Management__c" recordSetVar="Contact_Management__c" extensions="CO_ContactManagement_CL" >
+<apex:form title="Add Contact">
+    <apex:pageMessages />
+    <apex:pageBlock title="Add Contact">
+         <apex:pageBlockButtons >
+             <apex:commandButton action="{!SaveConMgt}" value="Save"/>
+             <apex:commandButton action="{!Cancel}" value="Cancel"/>     
+         </apex:pageBlockButtons>         
+         <apex:pageBlockSection showHeader="false" columns="1" id="block1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Lead Name" />
+                <apex:outputField value="{!ConMgt.Lead__c}" />             
+            </apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Contact"/>
+                <apex:inputField value="{!ConMgt.Contact__c}"/>                
+            </apex:pageBlockSectionItem>                        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

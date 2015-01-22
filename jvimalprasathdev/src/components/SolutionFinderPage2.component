@@ -1,0 +1,680 @@
+<apex:component >
+   
+<html lang="en" xml:lang="en">
+<head>
+  <title>Capital One : Solutions Finder</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <link rel="shortcut icon" href="/SolutionsFinder/favicon.ico"/>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="https://home.capitalone360.com/css/home/styles.cshtml?css=sofi/solutionsfinder" />
+      <link rel="stylesheet" type="text/css" media="print" href="https://home.capitalone360.com/css/home/styles.cshtml?css=sofi/print" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+
+<script type="text/javascript" src="../js/soficommon.js?t=1416375031590#pv92323fcc12f005e5"></script>
+
+								    
+<script language="JavaScript" type="text/javascript">
+        var env = {
+        stats: "https://stats.capitalone360.com/",
+        domain: "capitalone360.com"
+    };
+</script>
+<script type="text/javascript" src="https://stats.capitalone360.com/urchin.js"></script>
+  
+
+
+
+<script language="JavaScript" type="text/javascript">
+  urchinTracker('/sofiloan/Web/aboutYourself/defaultroute');
+</script>  
+
+
+<script type="text/javascript">
+	var sc_level1='capital one 360';
+	var sc_level2='home loans';
+			var sc_level3='solutions finder';
+		var sc_level4='about yourself';
+    var sc_level5='aboutyourself';
+  	var sc_pagetype='360:homeloans:sf';
+  	var sc_system='sofiloan_360';  
+    var sc_usertype='Web';
+	var sc_loanpurpose='purch';
+	var sc_route='defaultroute';
+	var sc_product='unknown';
+	var sc_promotioncode='P1000';
+	var sc_campaign='';
+	var sc_medium='';
+	var sc_source='';
+	var sc_term='';
+	var sc_content='';
+	var sc_lob='co360';
+	var sc_operatorid=',applicant,';
+		</script>
+<script type="text/javascript" src="https://nexus.ensighten.com/capitalone/Bootstrap.js"></script>
+
+
+  <script type="text/javascript" src="https://home.capitalone360.com/js/common.js"></script>
+    </head>
+<body>
+ <form action="/SolutionsFinder/index/welcome.vm?execution=e1s2" method="post" id="theForm">
+ <input type="hidden"  id="eventIdInput" name="_eventId" value="" />
+ <input type="hidden"  id="productIdInput" name="product" value="" />
+ <div id="dim"></div>
+<!-- Tealeaf PageTagging Start --> 
+<script type="text/javascript">
+var TL_page="aboutYourself";
+var TL_session="9B8445D838E46352DAC73740BE336A58";
+var TL_loannumber="";
+var TL_applicationview="Web";
+var TL_loanpurpose="purch";
+var TL_product="unknown";
+var TL_promoId="21";
+var TL_promoCode="P1000";
+</script>
+<!-- Tealeaf PageTagging End --> 
+
+  <div id="container" class="sofi">
+ <!-- outer container -->
+
+    <div id="header">
+      <h1><img src="https://images.capitalone360.com/images/popup-capitalone-logo.png" width='143' height='50' alt='Capital One' style='margin-top: 12px;' /></h1>
+      <h2 id="app_title" class="pHide">       Home Loans  : Solutions Finder</h2>
+    </div>
+
+<!-- Solfinder Channel // $solutionsFinderChannel -->
+<!-- Solfinder Product // $solutionsFinderProduct -->
+<!-- Solfinder LoanPurpose // $solutionsFinderLoanPurpose -->
+
+    <div id="status" class="pHide">
+      <ol id="status_bar">
+         <li class="first completed">
+         	<span>1. About Yourself</span> <span class="offscreen">Step 1 of 3, active </span>
+         </li>
+        <li class="">
+        	<span>2. About the Property</span> <span class="offscreen">Step 2 of 3,  inactive</span>
+        </li>
+        <li class="last ">
+        	<span>3. Your Solutions</span> <span class="offscreen">Step 3 of 3,  inactive</span>
+        </li>
+      </ol>
+    </div>
+    
+       <div id="questions" class="clearfix"><!-- questions -->      
+
+          
+             <div style="width: 100%; " class="clearfix" >
+     <div style="width: 625px; float: left"><H3 class="header">First, we need to know a few things about you.</H3></div>
+                  <div style="float: left; padding-top: 10px; align: right" class="pHide"> <img src="https://images.capitalone360.com/images/secure/solutionsfinder/red-phone.png" id='red_phone' width='40' height='40' alt='Call us from 8 AM to 8 PM at                1-855-238-8767 
+        ' /> </div>
+        <div style="padding-bottom: 10px; float: left; padding-top: 10px; align: left" class="pHide"><span style="font-size: 14px">Call us from <B>8 AM to 8 PM: </B></span><br/><span style="color: #a12830; font-size: 16px"><B>               1-855-238-8767 
+        </b></span></div>
+             </div>
+      
+      <div id="questions_container">
+     <div id="errors"><!-- error message container -->
+                        </div><!-- end errors -->
+     
+         
+
+
+
+     <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix   first_row ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Will there be a Co-Applicant?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="jointApplication_T" name="jointApplication" value="true" aria-describedby="jointApplicationError"  class="jqcl_booleanVisible"/> 
+      </span><label for="jointApplication_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="jointApplication_F" name="jointApplication" value="false" aria-describedby="jointApplicationError"  class="jqcl_booleanVisible"/> 
+      </span><label for="jointApplication_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="jointApplicationError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+     <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Are you Self-Employed?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerSelfEmployed_T" name="borrowerSelfEmployed" value="true" aria-describedby="borrowerSelfEmployedError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerSelfEmployed_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerSelfEmployed_F" name="borrowerSelfEmployed" value="false" aria-describedby="borrowerSelfEmployedError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerSelfEmployed_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="borrowerSelfEmployedError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+
+<!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft borrowerSelfEmployed_true" style="display:block;">
+<!-- IE HELPER -->
+ <!-- FIELD MONTH YEAR -->
+                         
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label indent">Self-Employed Since?</dt>
+   <dd class="questions_field">
+          
+ <label for="selfEmployedSince_month"><span class="ada-read"><span class="red" style="display:inline">*</span>Self-Employed Since? Month MM</span></label>
+ <input type="text" class=" char3 text MM jqcl_autoTab" value="" id="selfEmployedSince_month" aria-describedby="solutionsRequestInfo.selfEmployedSince.monthError" aria-required="true" name="selfEmployedSince.month" maxlength="2" autocomplete="off"/ >
+
+           <span class="h25 lh25 floatleft pl5 pr5 separator"> / </span><label for="selfEmployedSince_year"><span class="ada-read"><span class="red" style="display:inline">*</span>Self-Employed Since? Year YYY Y</span></label>
+ <input type="text" class=" char4 text YYYY jqcl_autoTab" value="" id="selfEmployedSince_year" aria-describedby="solutionsRequestInfo.selfEmployedSince.monthError" aria-required="true" name="selfEmployedSince.year" maxlength="4" autocomplete="off"/>
+
+           
+    <div class="field_error_msg" id="solutionsRequestInfo.selfEmployedSince.monthError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+ <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+
+<!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft jointApplication_true" style="display:block;">
+<!-- IE HELPER -->
+      <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Is your Co-Applicant Self-Employed?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coBorrowerSelfEmployed_T" name="coBorrowerSelfEmployed" value="true" aria-describedby="coBorrowerSelfEmployedError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coBorrowerSelfEmployed_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coBorrowerSelfEmployed_F" name="coBorrowerSelfEmployed" value="false" aria-describedby="coBorrowerSelfEmployedError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coBorrowerSelfEmployed_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="coBorrowerSelfEmployedError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+
+ <!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft coBorrowerSelfEmployed_true" style="display:block;">
+<!-- IE HELPER -->
+  <!-- FIELD MONTH YEAR -->
+                         
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label indent">Self-Employed Since?</dt>
+   <dd class="questions_field">
+          
+ <label for="jointSelfEmployedSince_month"><span class="ada-read"><span class="red" style="display:inline">*</span>Self-Employed Since? Month MM</span></label>
+ <input type="text" class=" char3 text MM jqcl_autoTab" value="" id="jointSelfEmployedSince_month" aria-describedby="solutionsRequestInfo.jointSelfEmployedSince.monthError" aria-required="true" name="jointSelfEmployedSince.month" maxlength="2" autocomplete="off" />
+
+           <span class="h25 lh25 floatleft pl5 pr5 separator"> / </span><label for="jointSelfEmployedSince_year"><span class="ada-read"><span class="red" style="display:inline">*</span>Self-Employed Since? Year YYY Y</span></label>
+ <input type="text" class=" char4 text YYYY jqcl_autoTab" value="" id="jointSelfEmployedSince_year" aria-describedby="solutionsRequestInfo.jointSelfEmployedSince.monthError" aria-required="true" name="jointSelfEmployedSince.year" maxlength="4" autocomplete="off"/>
+
+           
+    <div class="field_error_msg" id="solutionsRequestInfo.jointSelfEmployedSince.monthError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+  <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+
+<!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+
+        
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label annualHouseholdIncomeStyle"><label for="annualIncome_valueString">What is your annual income?</label></dt>
+   <dd class="questions_field">
+<span class="h25 lh25 floatleft pr5 dollar">$ </span>
+
+<input type="text" class="jqcl_CurrencyFormat grid1" value="" id="annualIncome_valueString" name="annualIncome.valueString" maxlength="11" autocomplete="off" aria-describedby="annualIncomeError"/>
+
+        
+    <div class="field_error_msg" id="annualIncomeError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+                    
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label otherMonthlyDebtStyle"><label for="otherMonthlyDebt_valueString">Enter the total minimum payment amount you pay each month on all debt, excluding your primary mortgage payment. (Please include required minimum monthly credit card payments, auto loans, student loans, mortgages you may have on 2nd homes or rental properties, and alimony/child support.)</label></dt>
+   <dd class="questions_field">
+<span class="h25 lh25 floatleft pr5 dollar">$ </span>
+
+<input type="text" class="jqcl_CurrencyFormat grid1" value="" id="otherMonthlyDebt_valueString" name="otherMonthlyDebt.valueString" maxlength="11" autocomplete="off" aria-describedby="otherMonthlyDebtError"/>
+
+        
+    <div class="field_error_msg" id="otherMonthlyDebtError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+    
+
+     <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Have you ever had a bankruptcy?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerPersonalBankruptcyInd_T" name="borrowerPersonalBankruptcyInd" value="true" aria-describedby="borrowerPersonalBankruptcyIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerPersonalBankruptcyInd_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerPersonalBankruptcyInd_F" name="borrowerPersonalBankruptcyInd" value="false" aria-describedby="borrowerPersonalBankruptcyIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerPersonalBankruptcyInd_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="borrowerPersonalBankruptcyIndError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+ <!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft borrowerPersonalBankruptcyInd_true" style="display:block;">
+<!-- IE HELPER -->
+            
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label "><label for="borrowerPersonalBankruptcyYearsAgo">How many years ago?</label></dt>
+   <dd class="questions_field">
+<input type="text" class=" grid1 text" value="" id="borrowerPersonalBankruptcyYearsAgo" name="borrowerPersonalBankruptcyYearsAgo" maxlength="2" autocomplete="off" aria-describedby="borrowerPersonalBankruptcyYearsAgoError"/>
+        
+    <div class="field_error_msg" id="borrowerPersonalBankruptcyYearsAgoError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+ <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+ 
+     <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Have you ever had a property foreclosed upon or given title or deed in lieu of title in the last 7 years?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerForeclosureOrLieuInd_T" name="borrowerForeclosureOrLieuInd" value="true" aria-describedby="borrowerForeclosureOrLieuIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerForeclosureOrLieuInd_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="borrowerForeclosureOrLieuInd_F" name="borrowerForeclosureOrLieuInd" value="false" aria-describedby="borrowerForeclosureOrLieuIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="borrowerForeclosureOrLieuInd_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="borrowerForeclosureOrLieuIndError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+   <!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft borrowerForeclosureOrLieuInd_true" style="display:block;">
+<!-- IE HELPER -->
+            
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label "><label for="borrowerForeclosureOrLieuIndYearsAgo">How many years ago?</label></dt>
+   <dd class="questions_field">
+<input type="text" class=" grid1 text" value="" id="borrowerForeclosureOrLieuIndYearsAgo" name="borrowerForeclosureOrLieuIndYearsAgo" maxlength="2" autocomplete="off" aria-describedby="borrowerForeclosureOrLieuIndYearsAgoError"/>
+        
+    <div class="field_error_msg" id="borrowerForeclosureOrLieuIndYearsAgoError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+ <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+<!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft jointApplication_true" style="display:block;">
+<!-- IE HELPER -->
+         <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Has your Co-Applicant ever had a bankruptcy?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coborrowerPersonalBankruptcyInd_T" name="coborrowerPersonalBankruptcyInd" value="true" aria-describedby="coborrowerPersonalBankruptcyIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coborrowerPersonalBankruptcyInd_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coborrowerPersonalBankruptcyInd_F" name="coborrowerPersonalBankruptcyInd" value="false" aria-describedby="coborrowerPersonalBankruptcyIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coborrowerPersonalBankruptcyInd_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="coborrowerPersonalBankruptcyIndError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+    <!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft coborrowerPersonalBankruptcyInd_true" style="display:block;">
+<!-- IE HELPER -->
+                
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label "><label for="coborrowerPersonalBankruptcyYearsAgo">How many years ago?</label></dt>
+   <dd class="questions_field">
+<input type="text" class=" grid1 text" value="" id="coborrowerPersonalBankruptcyYearsAgo" name="coborrowerPersonalBankruptcyYearsAgo" maxlength="2" autocomplete="off" aria-describedby="coborrowerPersonalBankruptcyYearsAgoError"/>
+        
+    <div class="field_error_msg" id="coborrowerPersonalBankruptcyYearsAgoError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+    <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+         <!-- sofiFieldBoolean -->
+         
+ <div class="question_row clearfix  ">
+   <fieldset>
+
+  <dl class="clearfix">
+   <dt class="questions_label "><legend class="IE-margin-fix"><span>Has your Co-Applicant ever had a property foreclosed upon or given title or deed in lieu of title in the last 7 years?</span></legend></dt>
+   <dd class="questions_field">
+ 
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coborrowerForeclosureOrLieuInd_T" name="coborrowerForeclosureOrLieuInd" value="true" aria-describedby="coborrowerForeclosureOrLieuIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coborrowerForeclosureOrLieuInd_T">Yes</label>
+    </span>
+    <span class="radio_container">
+      <span class="error_indicator"><input type="radio" id="coborrowerForeclosureOrLieuInd_F" name="coborrowerForeclosureOrLieuInd" value="false" aria-describedby="coborrowerForeclosureOrLieuIndError"  class="jqcl_booleanVisible"/> 
+      </span><label for="coborrowerForeclosureOrLieuInd_F">No</label>
+    </span>
+        <div class="field_error_msg"  id="coborrowerForeclosureOrLieuIndError"></div>
+   </dd>
+  </dl>
+  </fieldset>
+ </div>
+ 
+ 
+    	 <!-- VISIBLE WHEN -->
+<div class="ie7mb15 floatleft coborrowerForeclosureOrLieuInd_true" style="display:block;">
+<!-- IE HELPER -->
+    	         
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label "><label for="coborrowerForeclosureOrLieuIndYearsAgo">How many years ago?</label></dt>
+   <dd class="questions_field">
+<input type="text" class=" grid1 text" value="" id="coborrowerForeclosureOrLieuIndYearsAgo" name="coborrowerForeclosureOrLieuIndYearsAgo" maxlength="2" autocomplete="off" aria-describedby="coborrowerForeclosureOrLieuIndYearsAgoError"/>
+        
+    <div class="field_error_msg" id="coborrowerForeclosureOrLieuIndYearsAgoError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+	 <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+	 <!-- IE HELPER -->
+</div>
+<div class="clear">
+</div>
+<!-- END VISIBLE WHEN -->
+
+
+
+    <!-- FIELD SELECT -->
+        
+ <div class="question_row clearfix  ">
+ 
+   <dl class="clearfix">
+
+   <dt class="questions_label "><label for="creditType">How would you describe your credit?</label></dt>
+   <dd class="questions_field">
+<select id="creditType" name="creditType" aria-describedby="solutionsRequestInfo.creditTypeError" aria-required='true' class="h25 floatleft ">
+<option value="0">Please Select</option>
+<option value="1">Exceptional (740+)</option>
+<option value="2">Excellent (720-739)</option>
+<option value="3">Very Good (700-719)</option>
+<option value="4">Good (680-699)</option>
+<option value="5">Fair (660-679)</option>
+<option value="6">Less than 660</option>
+</select>
+        
+    <div class="field_error_msg" id="solutionsRequestInfo.creditTypeError"></div>
+   </dd>
+   
+  </dl>
+
+ </div>
+
+	     </div> <!-- questions_container -->
+      
+      <div id="controls" class="clearfix">
+                  <a href="#" id="continue" class="button large orange right jqcl_submitFlowButton jqcl_event_continue"><span>Continue</span></a>
+        <a href="#" id="back" class="button large orange right jqcl_submitFlowButton jqcl_event_back"><span>Back</span></a>
+        
+                
+      </div>  
+    </div><!-- questions -->
+
+
+    
+ 	    <div id="footer" class="pHide">
+	    	                		    	    		<p class="f12 pt5 center black">Questions? Talk to a Mortgage Specialist at <strong>               1-855-238-8767 
+        </strong> from 8 AM to 8 PM, 7 days a week.</p>
+    	    		<BR/>
+    	    		    	    	            <p class="f11 pt5 center #777777">Banking, Credit Card, Auto Finance and Home Loan products and services are offered by the Capital One family of companies,<br/> including Capital One Bank (USA), N.A. and Capital One, N.A., NMLS ID 453156, Members FDIC. <br/><br/> <strong>Securities, Credit Card, Auto Finance and Home Loan products are: Not FDIC insured &bull; Not bank guaranteed &bull; May lose value </strong><br/> <br/><strong>&copy; 2014 Capital One</strong>.  All rights reserved.</p>          
+            <BR/>
+             	                   <p class="f11 pt5 center #777777"> 
+                   						Capital One, N.A. will pay closing costs up to $1,000. Certain restrictions apply. Promotion may not be used towards points, per diem interest or tax-deductible fees, such as property taxes and private mortgage insurance (PMI). Any portion of the promotional amount not used towards closing costs will be forfeited. Promotion may be limited by investor/insurer guidelines for each loan type. Advertised discount not available on home equity loans or home equity lines of credit. This offer is non-transferable and cannot be combined with any other offer.						
+						
+                                </p>
+         
+	      	        </div>    
+
+  </div>
+ 	 
+         		<!--
+		Start of DoubleClick Floodlight Tag: Please do not remove
+		Activity name of this tag: Floodlight: OM/EzO Purchase: About Yourself
+		URL of the webpage where the tag is expected to be placed: http://www.capitalone360.com
+		This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+		Creation Date: 05/22/2012
+		-->
+		<script type="text/javascript"> 
+		var axel = Math.random() + "";
+		var a = axel * 10000000000000;
+		document.write('<iframe src="https://fls.doubleclick.net/activityi;src=806653;type=homel546;cat=flood306;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+		</script>
+		<noscript>
+		<iframe src="https://fls.doubleclick.net/activityi;src=806653;type=homel546;cat=flood306;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+		</noscript>
+		 
+		<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+    
+    
+          
+     <!-- Tag for Activity Group: Home Loans SOFI, Activity Name: Floodlight (unique): SOFI_AboutYourself_Purchase, Activity ID: 1184741 -->
+     <!-- Expected URL: http://www.capitalone360.com/ -->
+    
+     <!--
+     Activity ID: 1184741
+     Activity Name: Floodlight (unique): SOFI_AboutYourself_Purchase
+     Activity Group Name: Home Loans SOFI
+     -->
+    
+     <!--
+     Start of DoubleClick Floodlight Tag: Please do not remove
+     Activity name of this tag: Floodlight (unique): SOFI_AboutYourself_Purchase
+     URL of the webpage where the tag is expected to be placed: http://www.capitalone360.com/
+     This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+     Creation Date: 01/04/2013
+     -->
+   
+  <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://806653.fls.doubleclick.net/activityi;src=806653;type=homel806;cat=flood135;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  </script>
+  <noscript>
+   <iframe src="https://806653.fls.doubleclick.net/activityi;src=806653;type=homel806;cat=flood135;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+  </noscript>
+  
+  <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+ 
+ </form> 
+ 	
+ </body>
+ </html>
+
+
+<script type="text/javascript">
+
+var isRetail = false;
+j$ = jQuery.noConflict();
+j$(document).ready(function() {
+  j$("#borrowerRequiredHEL_T").live('change', function() {
+    j$('#borrowerRequiredHELOC_F').val("false");
+    j$('#borrowerRequiredHELOC_F').attr('checked', false);
+    j$('#borrowerRequiredHELOC_T').val("false");
+    j$('#borrowerRequiredHELOC_T').attr('checked', false);
+    j$('#borrowerRequiredHEL_F').val("false");
+    j$('#borrowerRequiredHEL_F').attr('checked', false);
+    j$('#borrowerRequiredHEL_T').val("true");
+  } )
+  
+    j$("#borrowerRequiredHELOC_T").live('change', function() {
+    j$('#borrowerRequiredHEL_F').val("false");
+    j$('#borrowerRequiredHEL_F').attr('checked', false);
+    j$('#borrowerRequiredHEL_T').val("false");
+    j$('#borrowerRequiredHEL_T').attr('checked', false);
+    j$('#borrowerRequiredHELOC_F').val("false");
+    j$('#borrowerRequiredHELOC_F').attr('checked', false);
+    j$('#borrowerRequiredHELOC_T').val("true");
+  } )
+  if (j$('input:radio[name=jointApplication]:checked').val() != null) {
+    if (j$('input:radio[name=jointApplication]:checked').val() == 'true') {
+        updateLablesWhenJointApplicant();
+    } else {
+        updateLablesWhenSingleApplicant();
+    }
+  }
+  j$("#jointApplication_T").change(function() {
+        updateLablesWhenJointApplicant();  
+  } )
+  j$("#jointApplication_F").change(function() {
+        updateLablesWhenSingleApplicant();
+  } )
+})
+function updateLablesWhenJointApplicant() {
+        j$('.annualHouseholdIncomeStyle label').html("What is your annual income, between you and your Co-Applicant?");
+        if (isRetail) {
+            j$('.otherMonthlyDebtStyle label').html("Between you and your Co-Applicant, enter the total minimum payment amount you pay each month on all debt. Please include minimum monthly payments on credit cards, automobile loans, student loans, real estate payments for 2nd homes or investment properties (excluding your primary residence and/or the subject property you are financing), alimony/child support, or personal loans.");
+        } else {
+            j$('.otherMonthlyDebtStyle label').html("Between you and your Co-Applicant, enter the total minimum payment amount you pay each month on all debt, excluding your primary mortgage payment. (Please include required minimum monthly credit card payments, auto loans, student loans, mortgages you may have on 2nd homes or rental properties, and alimony/child support.)");
+        }
+}
+function updateLablesWhenSingleApplicant() {
+        j$('.annualHouseholdIncomeStyle label').html("What is your annual income?");
+        if (isRetail) {
+            j$('.otherMonthlyDebtStyle label').html("Enter the total minimum payment amount you pay each month on all debt. Please include minimum monthly payments on credit cards, automobile loans, student loans, real estate payments for 2nd homes or investment properties (excluding your primary residence and/or the subject property you are financing), alimony/child support, or personal loans.");
+        } else {
+            j$('.otherMonthlyDebtStyle label').html("Enter the total minimum payment amount you pay each month on all debt, excluding your primary mortgage payment. (Please include required minimum monthly credit card payments, auto loans, student loans, mortgages you may have on 2nd homes or rental properties, and alimony/child support.)");
+        }
+}
+</script>
+</apex:component>

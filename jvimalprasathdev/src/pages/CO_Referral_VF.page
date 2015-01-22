@@ -1,0 +1,133 @@
+<apex:page standardController="Customer_Portal_Lead__c" extensions="CO_CustomerPortalController" sidebar="False" showHeader="False" action="{!onload}" > 
+
+ <!--   <script type="text/javascript">
+    
+    function contacttime()
+    {
+    var x = document.getElementById("j_id0:j_id2:block2:j_id50:j_id52");
+    if (x.value != "") {
+        alert(x.value);
+    }
+    else {
+    document.getElementById("j_id0:j_id2:block2:j_id50:j_id53").style.display="none";
+    }
+    }
+    </script> -->  
+    
+    <script type="text/javascript">
+          
+          
+        //Added for press of Enter button.   
+     function noenter(ev)  {
+        if (window.event && window.event.keyCode == 13 || ev.which == 13)  {
+            doSubmitAF();
+            return false;
+         } else {
+              return true;
+         }
+     }
+       
+        function confirmsave() {
+        var s= confirm("Record will be saved partially. Click on submit to create the record");
+        if (s != true) {
+        return false;
+        }
+        else {
+        return true;
+        }
+        }
+        function confirmsubmit() {
+        var r= confirm("Do you want to submit?");
+        if (r != true) {
+        return false;
+        }
+        else {
+        return true;
+        }
+        }
+       </script>
+    <!--   <script ="text/javascript"> 
+       window.onload = function Hidenone(j_id0:j_id1:block1:j_id30:mstat,"--None--") {
+            var picklist = document.getElementById(j_id0:j_id1:block1:j_id30:mstat);
+                if (mytext != null && hideContainText.length > 0) { 
+                    for (var i=picklist.options.length - 1; i>=0; i--) {
+                        if (picklist.options[i].text.indexOf(mytext) != -1 && picklist.selectedIndex != i)
+                            picklist.options.remove(i);
+                        } 
+                    }
+            }
+    </script> -->
+    <apex:form style="background-color:white;">   
+        <img src="{!URLFOR($Resource.CapitalOne)}" style="width :100%"/>
+        <apex:pageMessages />
+        <apex:pageBlock id="block1">
+            <apex:pageBlockSection title="Consumer Information" columns="3" >               
+                <apex:inputField label="First Name" value="{!CPLead.First_Name__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="Last Name"  value="{!CPLead.Last_Name__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="Suffix" value="{!CPLead.Suffix__c}"/>
+                <apex:inputField label="Primary Phone*"  value="{!CPLead.Borrowers_Home_Phone__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="Daytime Phone"  value="{!CPLead.Daytime_Phone__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="Email" value="{!CPLead.Email__c}"/>
+                <apex:inputField id="mstat" label="Marital Status" value="{!CPLead.Marrital_Status__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField id="atype" label="Applicant Type" value="{!CPLead.Applicant_Type__c}" required="true" onkeypress="return noenter(event);"/> 
+
+            
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Current Address" columns="3">               
+                <apex:inputField label="House #"  value="{!CPLead.Borrowers_Address_1__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="Street Address*"  value="{!CPLead.Borrowers_Address_2__c}" required="true" onkeypress="return noenter(event);"/>
+              
+                <apex:inputField label="City"  value="{!CPLead.Borrowers_City__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputField label="State"  value="{!CPLead.Borrower_State_2__c}" required="true" onkeypress="return noenter(event);"/>
+
+                <apex:inputField label="ZIP"  value="{!CPLead.Borrowers_Zip_Postal_Code__c}" required="true" onkeypress="return noenter(event);"/>                               
+            </apex:pageBlockSection>
+           </apex:pageblock>
+            
+            <apex:pageblock id="block2">
+
+            <apex:pageblocksection title="" columns="4">
+               <apex:inputField Label="Mailing address is same as current address" value="{!CPLead.Mailing_address_same_as_current_address__c}" onkeypress="return noenter(event);"/>  
+            </apex:pageblocksection>
+            
+            <apex:pageblocksection title="" columns="3">
+                <apex:inputfield Label="Preferred Contact Method" value="{!CPLead.Preferred_Contact_Method__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Time Zone" Value="{!CPLead.Time_Zone__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Best Contact Time" value="{!CPLead.Best_Contact_Time__c}" required="true" onkeypress="return noenter(event);"/>
+            </apex:pageblocksection>
+            <!-- <span>Best&nbsp;Contact&nbsp;Time</span> -->
+            <apex:pageblocksection title="" columns="3">
+                <apex:inputfield Label="How did you hear about us *" value="{!CpLead.How_did_you_hear_about_us__c}" required="true" onkeypress="return noenter(event);"/>            
+            </apex:pageblocksection>
+            
+
+            
+            
+            <apex:pageBlockSection title="Loan and Property Information" columns="3" >
+             <apex:inputfield Label="Desired Financing"  value="{!CPLead.Loan_Purpose__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Requested Loan Amount($)"  value="{!CPLead.Total_amount_finance_needed__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield id="sales" Label="Sales Price($)" value="{!CPLead.Sales_Price__c}" onkeypress="return noenter(event);"/>              
+                <apex:inputField label="Property State" value="{!CPLead.Property_State__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Property Use" value="{!CPLead.Property_Use__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Property Type" value="{!CPLead.Property_Type__c}" required="true" onkeypress="return noenter(event);"/>
+                <apex:inputfield Label="Estimated Property Value($)" value="{!Cplead.Approximate_value_of_your_property__c}" required="true" onkeypress="return noenter(event);"/>
+              <!--  <apex:inputField label="Occupancy Code" value="{!CPLead.Occupancy_Code__c}"/>             
+                <apex:inputField label="Loan Purpose" value="{!CPLead.Loan_Purpose__c}"/> -->
+            </apex:pageBlockSection>  
+            
+            <apex:pageblockSection title="Additional Information" columns="1">
+                <apex:inputField Label="" value="{!CPLead.Additional_Information__c}" style="width: 80%;"/>
+            
+            
+            </apex:pageblockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!close}" value="Close" id="closebutton" immediate="true"/>
+                <apex:commandButton action="{!Previous}" value="Previous" id="previousbutton" immediate="true" />
+              <!--  <apex:commandButton action="{!OnSave}" onclick="return(confirmsave())" value="Save" id="theButton"/>  -->
+                 <apex:commandButton action="{!submit}" onclick="return(confirmsubmit())" value="Submit" id="submitbutton"/>                                         
+            </apex:pageBlockButtons>          
+        </apex:pageBlock>   
+        <!--Added for press of Enter button-->
+        <apex:actionFunction name="doSubmitAF" action="{!submit}" />        
+    </apex:form>
+</apex:page>

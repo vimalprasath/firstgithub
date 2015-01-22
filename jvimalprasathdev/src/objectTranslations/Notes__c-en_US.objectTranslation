@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Note</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Notes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Notes Type --></label>
+        <name>Comments_List__c</name>
+        <picklistValues>
+            <masterLabel>Called Cell – No Answer</masterLabel>
+            <translation><!-- Called Cell – No Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Cell, Left Message – No Contact</masterLabel>
+            <translation><!-- Called Cell, Left Message – No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Cell, Made Contact – Follow Up</masterLabel>
+            <translation><!-- Called Cell, Made Contact – Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, Left Message – No Contact</masterLabel>
+            <translation><!-- Called Home, Left Message – No Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, Made Contact – Follow Up</masterLabel>
+            <translation><!-- Called Home, Made Contact – Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Called Home, No Answer</masterLabel>
+            <translation><!-- Called Home, No Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted – Moved to LOS</masterLabel>
+            <translation><!-- Contacted – Moved to LOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted – No Longer Interested</masterLabel>
+            <translation><!-- Contacted – No Longer Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead - assigned to queue</masterLabel>
+            <translation><!-- Lead - assigned to queue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead - assigned to user</masterLabel>
+            <translation><!-- Lead - assigned to user --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prequal Letter Sent (Purchase Offer Made)</masterLabel>
+            <translation><!-- Prequal Letter Sent (Purchase Offer Made) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refinance Offer Made</masterLabel>
+            <translation><!-- Refinance Offer Made --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Notes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Notes --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Note Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Empower_Notes --></label>
+        <name>Empower_Notes</name>
+    </webLinks>
+</CustomObjectTranslation>

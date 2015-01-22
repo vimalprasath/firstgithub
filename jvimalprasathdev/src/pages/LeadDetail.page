@@ -1,0 +1,15 @@
+<apex:page standardController="Lead" Extensions="LeadExtension" action="{!init}" id="pageid">
+<!-- <script>
+function reload(){
+window.location.reload();
+}
+</script>
+
+<apex:form id="formone">
+
+<apex:detail subject="{!l.id}" inlineEdit="true" oncomplete="reload()">
+</apex:detail>
+
+
+</apex:form> -->
+</apex:page>

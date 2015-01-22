@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Centralized_Retail_MC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Centralized Retail MC</shortDescription>
+        <value>00e30000001Vhbz</value>
+    </labels>
+    <labels>
+        <fullName>Direct_Inbound_Queueid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Direct Inbound</shortDescription>
+        <value>00Gf0000000S6Uk</value>
+    </labels>
+    <labels>
+        <fullName>Distributed_Retail_MC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Distributed Retail MC</shortDescription>
+        <value>00e30000001Vhc8</value>
+    </labels>
+    <labels>
+        <fullName>Intro_mail_Lead_template_id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Intro mail Lead template id</shortDescription>
+        <value>00Xa0000001oA3V</value>
+    </labels>
+    <labels>
+        <fullName>MDW_Report_Criteria</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDW Report Criteria</shortDescription>
+        <value>WHERE LastModifiedDate &gt;= LAST_N_DAYS:7</value>
+    </labels>
+    <labels>
+        <fullName>MDW_Report_Email_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDW Report Email Address</shortDescription>
+        <value>David.Goodenough@capitalone.xxx</value>
+    </labels>
+    <labels>
+        <fullName>MDW_Report_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MDW Report Name</shortDescription>
+        <value>SF.COF.MDW.PROD.YYYYMMDD_sf_opportunity</value>
+    </labels>
+    <labels>
+        <fullName>No_Contact_Questionnaire_template_id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Contact Questionnaire template id</shortDescription>
+        <value>00Xa0000001oA3g</value>
+    </labels>
+    <labels>
+        <fullName>Notebuttonfor_prdn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Notebuttonfor prdn</shortDescription>
+        <value>https://sofiloan.qa2.ingqa.com/SolutionsFinder/index/welcome.vm?initialRouting=notes&amp;applicationView=RETAIL_CONSULTANT_CENTRALIZED&amp;lead=</value>
+    </labels>
+    <labels>
+        <fullName>Notebuttonfor_sbx</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Notebuttonfor sbx</shortDescription>
+        <value>https://sofiloan.qa2.ingqa.com/SolutionsFinder/index/welcome.vm?initialRouting=notes&amp;applicationView=RETAIL_CONSULTANT_CENTRALIZED&amp;lead=</value>
+    </labels>
+    <labels>
+        <fullName>OPUS_Certificate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OPUS Certificate</shortDescription>
+        <value>SBX_XMLGW</value>
+    </labels>
+    <labels>
+        <fullName>OPUS_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OPUS URL</shortDescription>
+        <value>https://ionxmlqa-salesforcein.capitalone.com:8566/qa2/dgw</value>
+    </labels>
+    <labels>
+        <fullName>System_Admin_Role_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>System Admin Role ID</shortDescription>
+        <value>00E30000001Lzyo</value>
+    </labels>
+    <labels>
+        <fullName>View_In_OPUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View in Opus</shortDescription>
+        <value>Sofiloan.qa2.ingqa.com</value>
+    </labels>
+    <labels>
+        <fullName>msa_holdingqueueid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>msa holdingqueueid</shortDescription>
+        <value>00Ga0000003MSYN</value>
+    </labels>
+</CustomLabels>

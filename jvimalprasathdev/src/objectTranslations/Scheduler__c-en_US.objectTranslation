@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scheduler</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Schedulers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Count --></label>
+        <name>Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current User ID --></label>
+        <name>Current_User_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current User Name --></label>
+        <name>Current_User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Assigned Date --></label>
+        <name>Last_Assigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Limit --></label>
+        <name>Lead_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next User Id --></label>
+        <name>Next_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next User Name --></label>
+        <name>Next_User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- OOO --></label>
+        <name>OOO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Name --></label>
+        <name>Queue_Name__c</name>
+        <relationshipLabel><!-- Schedulers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current User Proficiency Level --></label>
+        <name>User_Proficiency_Level__c</name>
+    </fields>
+    <layouts>
+        <layout>Scheduler Object Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

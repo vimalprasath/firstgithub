@@ -1,0 +1,49 @@
+<apex:page Controller="UserController2">
+<apex:form >
+
+
+<apex:pageBlock id="editPB" title="Edit Users">
+    <apex:pageBlockButtons id="editButtons" location="top" rendered="true">
+    <apex:commandButton id="saveBtn" value="Save" action="{!saveAction}" />
+    <apex:commandButton id="cancelBtn" value="Cancel" action="{!cancelAction}" />
+    </apex:pageBlockButtons>
+       
+            <apex:pageblocktable value="{!filteredUsers}" var="Muser" id="theTable"> 
+            <apex:column >
+            <apex:facet name="header">Name
+            </apex:facet>
+            <apex:inputField value="{!Muser.Name}"/>
+            </apex:column>
+            
+            <apex:column >
+            <apex:facet name="header">OOO
+            </apex:facet>
+            <apex:inputField value="{!Muser.OOO__c}"/>
+            </apex:column>            
+            
+            <apex:column >
+            <apex:facet name="header">Lead Limit
+            </apex:facet>
+            <apex:inputField rendered="{!CurrentpageId!=CurrentuserId}" value="{!Muser.Lead_limit__c}"/>
+            <apex:outputField rendered="{!CurrentpageId==CurrentuserId}" value="{!Muser.Lead_limit__c}"/>
+            </apex:column>
+            
+            <apex:column >
+            <apex:facet name="header">Unlimited Leads
+            </apex:facet>
+            <apex:inputField rendered="{!CurrentpageId!=CurrentuserId}" value="{!Muser.Unlimited_Leads__c}"/>
+            <apex:outputField rendered="{!CurrentpageId==CurrentuserId}" value="{!Muser.Unlimited_Leads__c}"/>
+            </apex:column>
+            
+            <apex:column >
+            <apex:facet name="header">Available
+            </apex:facet>
+            <apex:inputField rendered="{!CurrentpageId!=CurrentuserId}" value="{!Muser.Avavilable__c}"/>
+            <apex:outputField rendered="{!CurrentpageId==CurrentuserId}" value="{!Muser.Avavilable__c}"/>
+            </apex:column>
+            
+</apex:pageblocktable>
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

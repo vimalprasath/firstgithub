@@ -1,0 +1,26 @@
+<apex:page Controller="UtilitiesController">
+ 
+ <apex:form id="UtilityForm">
+   <apex:pageBlock >
+     <table  width="60%">
+      <tr>
+       <td width="20%" >
+         <apex:commandButton value="Run Opportunity Report" reRender="UtilityForm" action="{!InitateMUMReport}"/>
+       </td>
+       <td width="40%">
+       <apex:outputText value="To Run the opportunity report for MDW. ">      </apex:outputText>
+         
+       </td>
+       <td width="20%">
+        <apex:outputPanel id="InitatedOutpnl"  >
+           <apex:outputText style=" Color:red; font-weight: bold;" value="Utility initiated." rendered="{!RunMDWReportInitated}"></apex:outputText>
+              </apex:outputPanel>
+       </td>
+     </tr>
+    </table> 
+   
+   </apex:pageBlock>
+    
+ </apex:form>
+ 
+</apex:page>

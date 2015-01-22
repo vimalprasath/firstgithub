@@ -1,0 +1,284 @@
+<apex:page Controller="mySofiLeadListViewController"  showHeader="true" sidebar="true" name="My Leads" id="p">
+ 
+<style type="text/css" title="currentStyle">
+ @import "{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/css/demo_page.css')}";
+ @import "{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/css/demo_table.css')}";
+ @import "{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/css/header.css')}";
+</style>
+<style type="text/css">
+table
+{
+table-layout:fixed;
+} 
+
+table.display th {
+    font-size: 12px;
+    border-width: 1px;
+    padding: 0x;
+    border-style: ridge;
+    background-color: #dedecc;
+}
+
+table.display td {
+    font-size: 12px;
+    border-width: 1px;
+    padding: 0x;
+    }
+
+</style><script src="{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/js/jquery.js')}"></script>
+<script src="{!URLFOR($Resource.DataTables, '/DataTables-1.9.2/media/js/jquery.dataTables.js')}"></script>
+
+<script type="text/javascript" charset="utf-8">
+
+(function($) { 
+$.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) { 
+    // check that we have a column id 
+    if ( typeof iColumn == "undefined" ) return new Array(); 
+      
+    // by default we only want unique data 
+    if ( typeof bUnique == "undefined" ) bUnique = true; 
+      
+    // by default we do want to only look at filtered data 
+    if ( typeof bFiltered == "undefined" ) bFiltered = true; 
+      
+    // by default we do not want to include empty values 
+    if ( typeof bIgnoreEmpty == "undefined" ) bIgnoreEmpty = true; 
+      
+    // list of rows which we re going to loop through 
+    var aiRows; 
+      
+    // use only filtered rows 
+    if (bFiltered == true) aiRows = oSettings.aiDisplay;  
+    // use all rows 
+    else aiRows = oSettings.aiDisplayMaster; // all row numbers 
+  
+    // set up data array     
+    var asResultData = new Array(); 
+      
+    for (var i=0,c=aiRows.length; i<c; i++) { 
+        iRow = aiRows[i]; 
+        var aData = this.fnGetData(iRow); 
+        var sValue = aData[iColumn]; 
+          
+        // ignore empty values? 
+        if (bIgnoreEmpty == true && sValue.length == 0) continue; 
+  
+        // ignore unique values? 
+        else if (bUnique == true && jQuery.inArray(sValue, asResultData) > -1) continue; 
+          
+        // else push the value onto the result data array 
+        else asResultData.push(sValue); 
+    } 
+      
+    return asResultData; 
+}}(jQuery)); 
+  
+  
+function fnCreateSelect( aData ) 
+{ 
+    var r='<select style="font-size: 8pt;"><option value=""></option>', i, iLen=aData.length; 
+    for ( i=0 ; i<iLen ; i++ ) 
+    { 
+         
+        r += '<option value="'+aData[i]+'">'+aData[i]+'</option>'; 
+    } 
+    return r+'</select>'; 
+}
+
+ 
+  // adding this for Scrolling both
+
+$(document).ready(function() { 
+    var v = document.getElementById('{!$Component.myform.myblock.TextId}').value;
+    var v2 = document.getElementById('{!$Component.myform.myblock.StatusId}').value;
+    var v4 = document.getElementById('{!$Component.myform.myblock.LoanPurposeId}').value;
+    var v3 = document.getElementById('{!$Component.myform.myblock.sourceid}').value;
+    var v5 = document.getElementById('{!$Component.myform.myblock.OwnerId}').value;
+ 
+   if ((v == '' || v == null)&&(v2 == '' || v2 == null || v2 == 'None')&&(v3 == '' || v3 == null || v3 == 'None')&& (v4 == '' || v4 == null || v4 == 'None')&& ( v5 == 'None') ) {
+  
+    $('#SearchFilter').hide();
+    $('#toggleminus').hide();
+    $('#slick-toggle').click(function() {
+    $('#SearchFilter').toggle(1);
+    $('#toggleplus').toggle(1);
+    $('#toggleminus').toggle(1);
+    return false;
+     });
+     }
+    else
+     {
+  
+     $('#toggleplus').hide();
+     $('#slick-toggle').click(function() {
+     $('#SearchFilter').toggle(400);
+     $('#toggleplus').toggle(1);
+     $('#toggleminus').toggle(1);
+     return false;
+     })
+     }
+
+    /* Initialise the DataTable */ 
+    var oTable = $('#mysofileadTable').dataTable( {
+     "aaSorting": [] 
+   
+        } ); 
+      
+    /* Add a select menu for each TH element in the table footer */
+    $("tfoot th").each( function ( i ) { 
+        this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i) ); 
+        $('select', this).change( function () { 
+            oTable.fnFilter( $(this).val(), i ); 
+        } ); 
+    } ); 
+} );
+
+  
+</script>
+
+<body>
+ <apex:form id="myform">
+           
+         <apex:pageBlock id="myblock">
+         <center><apex:commandButton action="{!Refresh}" value="Refresh"/>
+            </center>
+         <span id="slick-toggle"><a href="#" style="color:#5C5C5C"><span id="toggleplus"><b>+</b></span><span id="toggleminus"><b>-</b></span>Show/Hide Search Filters</a></span>
+
+       
+             <div id="SearchFilter" Style="font-size:12px;marging-top:20px;width:100%;">
+                 <b>Lead Name</b>
+                 <apex:inputText id="TextId" value="{!TName}" label="Enter Name"/>
+                 <b>Status</b>
+              <apex:selectList id="StatusId" value="{!Selectedstatus}" size="1" style="font-size: 12px;">
+                 <apex:selectOptions value="{!statusoptions}" />
+             </apex:selectList>
+                                <apex:selectList id="sourceid" value="{!Selectedsource}" size="1" style="font-size: 12px;"><b>Source</b>
+                 <apex:selectOptions value="{!sourceoptions}" />
+             </apex:selectList>
+             <b>Loan Purpose</b>
+
+             <apex:selectList id="LoanPurposeId" value="{!Selectedloanpurpose}" size="1" style="font-size: 12px;"> 
+                        <apex:selectOptions value="{!loanpurposeoptions}" />
+             </apex:selectList>
+             
+           
+
+             <apex:selectList id="OwnerId" value="{!SelectedU}" size="1" style="font-size: 12px;"><b>Owner</b>
+                 <apex:selectOptions value="{!UserListGS}" />
+             </apex:selectList>      
+             <apex:commandButton value="Submit" style="font-size: 12px;" action="{!goLeads}"/>
+             </div>
+
+            <!-- </apex:pageBlockSection>-->
+         </apex:pageBlock>
+         
+      </apex:form>
+</body>
+             
+             
+     <apex:form id="myform1" >        
+             <apex:pageblock id="SearchViewBlock" rendered="{!(searchflag || searchflag1)}">
+    
+             <apex:outputpanel id="mainpanel1">                 
+                     <apex:pageblocktable value="{!filteredLead2}" var="PLead" rendered="{!searchflag1}"> 
+                          <apex:column >
+                              <apex:facet name="header">Name  
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Name{!IF(sortExpression=='Name',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                               <a href="/{!PLead.id}"><apex:outputField value="{!PLead.Name}"/></a>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Email
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Email{!IF(sortExpression=='Email',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Email" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Email}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Lead Status  
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Lead Status{!IF(sortExpression=='Status',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Status" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Status}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Source  
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Source{!IF(sortExpression=='channel_sources__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="channel_sources__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Channel_Sources__c}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Loan Purpose
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Loan Purpose{!IF(sortExpression=='Loan_Purpose__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Loan_Purpose__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Loan_Purpose__c}"/>
+                          </apex:column>
+                          
+                          <apex:column >
+                              <apex:facet name="header">OPUS ID
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="OPUS ID {!IF(sortExpression=='Empower_Lead_ID__c',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Empower_Lead_ID__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Empower_Lead_ID__c}"/>
+                          </apex:column>
+                          
+                           <apex:column >
+                              <apex:facet name="header">Owner 
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Owner {!IF(sortExpression=='Owner',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="Owner" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.Owner.Name}"/>
+                          </apex:column>
+                          
+                           
+                          
+                          
+                           <apex:column >
+                              <apex:facet name="header">Created Date  
+                                  <apex:commandLink action="{!colmnsorting1}" status="loading" rerender="mainpanel1" value="Created Date{!IF(sortExpression=='createddate',IF(sortDirection='ASC',' ↑',' ↓'),'')}">
+                                      <apex:param value="createddate" name="column" assignTo="{!sortExpression}" ></apex:param>
+                                  </apex:commandLink>
+                              </apex:facet>
+                              <apex:outputField value="{!PLead.createddate}"/>
+                          </apex:column>
+
+                     </apex:pageblocktable>
+             </apex:outputpanel>
+             <apex:pageBlockButtons location="bottom" id="myButtons">
+               <!--<apex:outputPanel >-->
+                    <apex:commandButton action="{!Beginning}" title="Beginning" value="<<" disabled="{!disablePrevious}" reRender="SearchViewBlock,myButtons"/>
+                    <apex:commandButton action="{!Previous}" title="Previous" value="<" disabled="{!disablePrevious}" reRender="SearchViewBlock,myButtons"/>        
+                    <apex:commandButton action="{!Next}" title="Next" value=">" disabled="{!disableNext}" reRender="SearchViewBlock,myButtons"/>
+                    <apex:commandButton action="{!End}" title="End" value=">>" disabled="{!disableEnd}" reRender="SearchViewBlock,myButtons"/>        
+              <!-- </apex:outputPanel>-->
+               </apex:pageBlockButtons>
+          </apex:pageblock>
+         
+          <apex:actionStatus id="loading"> 
+              <apex:facet name="start">
+                   <div class="waitingSearchDiv" id="l_loading" style="background-color: #fbfbfb; height:300%; opacity:0.75; width:120%; filter: alpha(opacity = 50);"> 
+                       <div class="waitingHolder" style="top:400px; width: 100px;">
+                           <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                           <span class="waitingDescription">Please Wait...</span>
+                       </div>
+                   </div> 
+             </apex:facet>
+         </apex:actionStatus> 
+         </apex:form>  
+     <apex:enhancedList type="Lead" customizable="false" rowsPerPage="25"  height="450" rendered="{!hide}" listId="{!ListViewURLID}"/>
+    
+</apex:page>

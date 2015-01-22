@@ -1,0 +1,125 @@
+<apex:page standardController="Lead" extensions="CO_SendEmail">
+<style type="text/css">
+div.scroll
+{
+width:100%;
+height:100%;
+overflow:scroll;
+}
+
+</style>
+<script>
+function check(obj_inpf)
+{
+
+}
+</script>
+
+    <apex:form id="frm">
+        <apex:pageMessages />
+        <apex:pageblock >
+            <apex:selectList value="{!SelectedFoldername}" size="1">
+                <b> Select Folder: </b>&nbsp;
+                <apex:selectOptions value="{!Folderoptions}" />
+                    <apex:actionSupport event="onchange" action="{!Selectedfolderemails}"  />
+            </apex:selectList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:selectList value="{!SelectedemailId}" size="1" rendered="{!showemailoptions}">
+               <b> Select Template:</b> &nbsp;
+                <apex:selectOptions value="{!options}" />
+                    <apex:actionSupport event="onchange" action="{!Selectedemailmethod}"  />
+            </apex:selectList>
+        </apex:pageblock>
+        <apex:pageBlock rendered="{!showtempdetails}"> 
+            <apex:pageBlockButtons location="top">
+                <br/><br/>
+                <apex:commandButton value="Send Email" action="{!sendmail}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" /><br/><br/>
+            </apex:pageBlockButtons>
+            To : {!lea.name} "{!lea.email}" <br/>
+            <p><b>{!emailTemp1.Name}</b> - Subject: {!emailTemp1.Subject}</p><br/><br/>
+            <apex:pageblock > 
+                
+            <apex:image id="preapp" value="{!$Resource.Pre_Application_Logo}" rendered="{!showpreapp}" style="width:100%; height:75%"/>
+            <apex:image id="app" value="{!$Resource.ApplicationLogo}" rendered="{!showapp}" style="width:100%; height:75%"/>
+            <apex:image id="loanapp" value="{!$Resource.LoanApprovalLogo}" rendered="{!showloanapp}" style="width:100%; height:25%"/>
+            <apex:image id="closing" value="{!$Resource.ClosingLogo}" rendered="{!showclose}" style="width:100%; height:75%"/>
+            <apex:image id="congrats" value="{!$Resource.CongratsLogo}" rendered="{!showcongrats}" style="width:100%; height:75%"/>
+            
+            
+           <!-- <table border="1" style="table-layout:fixed;" width="100%">
+              <tr>
+              <td><div class="scroll"><pre style="font-family:verdana;">{!emailTempbody}</pre></div></td>            
+              </tr>
+            </table>-->
+            
+            <!--<apex:repeat value="{!attachments}" var="a">
+            <apex:inputFile value="{!a.body}"/>
+            </apex:repeat>-->
+            <br/>
+            <apex:dynamicComponent componentValue="{!preview}" /> 
+            </apex:pageblock>            
+        </apex:pageblock> 
+        
+                
+        <apex:pageBlock rendered="{!showclosingdates}">
+            <apex:pageBlockButtons location="top">  
+               <!--<apex:commandButton value="Show Template" action="{!showtemplate}" />   -->           
+                <apex:commandButton value="Send Email" action="{!sendmail}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" />
+            </apex:pageBlockButtons>           
+            <apex:pageBlockSection title="Your Loan Is In Closing" columns="2">
+                <apex:inputfield value="{!lea.Closing_Date__c}"/>
+                <apex:inputfield value="{!lea.Closing_Costs__c}"/>
+                <apex:inputfield value="{!lea.Made_Payable_To__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+        
+        <apex:pageBlock rendered="{!showemailchecker}">
+            <apex:pageBlockButtons location="top">  
+               <!-- <apex:commandButton value="Show Template" action="{!showtemplate}" /> -->            
+                <apex:commandButton value="Send Email" action="{!sendmail}" />
+                <apex:commandButton value="Cancel" action="{!cancel}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Financial Documents Needed" columns="2">
+            <apex:inputfield value="{!lea.Document_Deadline__c}" rendered="{!showdates}"/>
+            <!--<apex:outputText value="{!URLFOR($Resource.AppZipLogo, 'Applogo.jpg')}" rendered="true"/> -->
+            <apex:inputfield value="{!lea.Closing_Date__c}" rendered="{!showdates}"/>
+            <apex:inputfield value="{!lea.Pay_stub__c}"/>
+            <apex:inputfield value="{!lea.Most_recent_W_2__c}"/>
+            <apex:inputfield value="{!lea.Most_recent_W_2_2_years__c}"/>
+            <apex:inputfield value="{!lea.Personal_tax_return__c}"/>
+            <apex:inputfield value="{!lea.Personal_tax_return_2_years__c}"/>
+            <apex:inputfield value="{!lea.Business_tax_return__c}"/>
+            <apex:inputfield value="{!lea.Social_Security_award_letter__c}"/>
+            <apex:inputfield value="{!lea.Pension_Annuity_Statements__c}"/>
+            <apex:inputfield value="{!lea.Cancelled_Checks__c}"/>
+            <apex:inputfield value="{!lea.Bank_Statements__c}"/>
+            <apex:inputfield value="{!lea.Stocks_IRA_401k_Statements__c}"/>
+            <apex:inputfield value="{!lea.Outstanding_Mortgages__c}"/>
+            <apex:inputfield value="{!lea.HUD_1_Settlement_Statement__c}"/>
+            <apex:inputfield value="{!lea.Intened_use_of_Cash_Out_funds__c}"/>
+            <apex:inputfield value="{!lea.Sales_Contract__c}"/>
+            <apex:inputfield value="{!lea.Divorce_Separation_decree__c}"/>
+            <apex:inputfield value="{!lea.Driver_s_License__c}"/>
+            <apex:inputfield value="{!lea.Homeowner_s_insurance_policy__c}"/>
+            <apex:inputfield value="{!lea.Homeowner_s_Condo_association__c}"/>
+            <apex:inputfield value="{!lea.Documentation_of_credit_dispute__c}"/>
+            <apex:inputfield value="{!lea.Property_Survey__c}"/>
+            <apex:inputfield value="{!lea.Irrevocable_Trust__c}"/>
+            <apex:inputfield value="{!lea.RESPA_documents__c}"/>
+            <apex:inputfield value="{!lea.Documents_for_Non_US_Citizens__c}"/>
+            <apex:inputfield value="{!lea.Statement_s_of_debts__c}"/>
+            <apex:inputfield value="{!lea.Other__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+        <apex:pageblock rendered="{!showattach}" title="Add Attachments">
+        <apex:pageBlockSection columns="2">
+            <apex:repeat value="{!attachments}" var="a">
+            <!--<apex:inputText title="Name" value="{!a.name}"/>-->
+            <apex:inputFile value="{!a.body}" fileName="{!a.name}" onchange="check(this)"/>
+            </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

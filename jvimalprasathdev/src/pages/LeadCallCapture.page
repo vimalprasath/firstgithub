@@ -1,0 +1,6 @@
+<apex:page Controller="LeadCallCapture" TabStyle="User" sidebar="false" showHeader="false">
+    <flow:interview name="Call_Capture_Lead_Lookup" interview="{!Entry}" finishLocation="{!redirectpage}" />
+</apex:page>
+<!--<apex:page StandardController="Lead" tabStyle="lead">
+<flow:interview name="Lead_Creation" finishLocation="/{!lead.Id}" />
+</apex:page>-->

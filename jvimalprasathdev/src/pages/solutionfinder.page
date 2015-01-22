@@ -1,0 +1,5 @@
+<apex:page sidebar="false" showHeader="false">
+ <apex:form >
+  <c:SolutionFinderPage2 />
+  </apex:form> 
+</apex:page>

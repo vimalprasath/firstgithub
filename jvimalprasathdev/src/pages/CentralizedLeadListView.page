@@ -1,0 +1,5 @@
+<apex:page standardcontroller="Lead" showHeader="true" sidebar="true" >
+<div class="homeTab">
+    <apex:enhancedList customizable="false" height="500" type="Lead" />
+</div>
+</apex:page>

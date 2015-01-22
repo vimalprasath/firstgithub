@@ -1,0 +1,52 @@
+<!--
+* @Created By : Yunus (Wipro)
+* @Last Modified By : Leena (Wipro)
+* @description : This Page is used to show thw Rate Watch functionality
+*                 
+-->
+<apex:page controller="CO_DisplayLeadRate_CL">
+<script>
+function IsNumeric(keyCode,e)
+            {
+              
+               if((keyCode>=46 && keyCode<=57)|| (keyCode>=96 && keyCode<=105)||(keyCode== 110)||  (keyCode==8||keyCode==9 || keyCode==190) ||  keyCode==39 ||keyCode==37)
+               {
+                
+               }
+               else
+               {
+                        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                        return false;  
+               }              
+            } 
+</script>
+    <apex:form >
+    <apex:pagemessages />
+        <apex:pageBlock title="Rate Watch">                        
+                <apex:outputText >Conforming 15 Years :</apex:outputText>
+                <apex:inputText label="Current Rate" value="{!currentrate1}" onkeydown="IsNumeric(event.keyCode,event);" style="width:5%"/>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:outputText >Conforming 20 Years :</apex:outputText>
+                <apex:inputText label="Current Rate" value="{!currentrate2}" onkeydown="IsNumeric(event.keyCode,event);" style="width:5%"/>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:outputText >Conforming 30 Years :</apex:outputText>
+                <apex:inputText label="Current Rate" value="{!currentrate3}" onkeydown="IsNumeric(event.keyCode,event);" style="width:5%"/>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:commandButton value="Search" id="Search" action="{!findLead}"/>
+            <Apex:pageBlocksection columns="1">
+                <apex:outputpanel rendered="{!showtable}"><br/>
+                <apex:pageBlockTable value="{!CurrentrateLeads}" var="p" >
+                    <apex:column headerValue="Lead Name" >
+                    <apex:outputLink value="/{!p.id}"><apex:outputText value="{!p.name}"/> </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="Email" value="{!p.email}"/>
+                    <apex:column headerValue="Status" value="{!p.status}"/>
+                    <apex:column headerValue="Loan Type"  value="{!p.Rate_Loan_type__c}"/>
+                    <apex:column headerValue="Current Rate" value="{!p.Current_Rate__c}"/>
+                    <apex:column headerValue="Loan Term" value="{!p.Loan_Term__c}"/>
+                </apex:pageBlockTable>
+                </apex:outputpanel>
+                <apex:outputpanel rendered="{!showmesg}">
+                <br/><b>{!messg}</b><br/>
+                </apex:outputpanel>
+            </Apex:pageBlocksection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

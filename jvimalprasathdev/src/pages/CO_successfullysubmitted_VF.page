@@ -1,0 +1,18 @@
+<apex:page standardController="Customer_Portal_Lead__c" extensions="CO_CustomerPortalController" sidebar="False" showHeader="false">
+    <apex:image id="theImage" value="{!$Resource.CapitalOne}" width="100%"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockSection columns="1">
+            Thank you.Your Referral for customer <b>{!createdlead_firstName} {!createdlead_lastName}</b> has been submitted. Please call the Centralized Mortgage Consultant Hot line (Phone #-1-866-610-2951) to conduct a warm transfer within 30 minutes.
+            <br/><br/>
+            If you are unable to connect with an MC or if the customer prefers to be contacted at another time, a Mortgage Consultant will call the Customer at the phone number provided within 1 business day.
+            
+                                   
+            </apex:pageblockSection>
+            <apex:pageblockButtons location="bottom">
+                <apex:commandButton value="Close" action="{!Close}" id="CloseButton"/>
+            </apex:pageblockButtons>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

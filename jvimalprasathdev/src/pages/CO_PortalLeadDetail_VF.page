@@ -1,0 +1,83 @@
+<apex:page standardController="Customer_Portal_Lead__c" extensions="CO_PortalLeadDetailController" showHeader="false" sidebar="false" action="{!showsubmit}">
+<apex:image id="theImage" value="{!$Resource.CapitalOne}" width="100%"/>
+    <style>
+    
+//---------------------------    
+
+    
+//---------------------------   
+    
+        .activeTab {background-color: #236FBD; color:white; 
+            background-image:none}
+        .inactiveTab { background-color: lightgrey; color:black; 
+            background-image:none}
+        
+        .customPopup {
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            left: 20%;
+            padding: 10px;
+            position: absolute;
+            z-index: 9999;
+            width: 500px;
+            top: 20%;
+        }
+        
+        .disabledTextBox {
+            background-color: white;
+            border: 1px solid;
+            color: black;
+            cursor: default;
+            width: 90px;
+            display: table;
+            padding: 2px 1px;
+            text-align:right;
+        }  
+        .inputSize{
+            width: 250px;
+            height: 50px;    
+        } 
+        
+        .closeButton {
+            float: right;
+        }
+        
+        .NotesSection{
+            width: 600px;
+            height: 300px;  
+        }
+</style>    
+   
+    <apex:tabPanel switchType="Portal" selectedTab="tabdetails" id="PortalLeadPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">   
+        
+            <apex:tab label="Details" name="CusPortDetails" id="tabdetails">
+                <apex:form >
+                <apex:commandButton action="{!backbutton}" value="Back"/>
+                    <apex:commandButton style="Float:right;" action="{!CreateLead}" rendered="{!showsubmitbtn}" value="Submit" title="Submit Lead"/>                
+                    <apex:detail relatedList="false" title="true"/>
+                   <!-- <apex:outputPanel id="popup"  >            
+                        <apex:outputPanel id="PopInnerOutputPortal" styleClass="customPopup" layout="block" rendered="{!displayPopUp}">                                            
+                            <apex:pageBlock >
+                                <apex:pageblockSection >                                             
+                                    <apex:pageblockSectionItem >
+                                        Lead Submitted Successfully....!         
+                                    </apex:pageblockSectionItem>
+                                </apex:pageblockSection>
+                            </apex:pageBlock>
+                            <apex:commandButton value="Okay" Action="{!ClosePopUp}" title="Submit Complete" styleClass="closeButton" rerender="popup" />
+                        </apex:outputPanel>
+                    </apex:outputPanel> -->
+                </apex:form>                
+            </apex:tab>
+            <apex:tab label="Notes" Name="CusPortalLeadNotes" id="LeadNotes">
+                <apex:form >          
+                    <apex:pageBlock id="NotesPage">
+                        Comments<br/><apex:inputField styleClass="NotesSection" label="Notes" value="{!CPLead2.Comments__c}"/>           
+                        <apex:commandButton action="{!SaveNote}" value="Save" title="Save"/>                                                    
+                    </apex:pageBlock>    
+                </apex:form>           
+            </apex:tab>
+       
+    </apex:tabPanel>   
+</apex:page>

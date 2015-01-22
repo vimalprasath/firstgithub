@@ -1,0 +1,192 @@
+<apex:page showHeader="false">
+
+<html lang="en">
+<head>
+  
+  <title>Capital One &ndash; Home Loans</title>
+  
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width"></meta>
+ <style type="text/css" title="currentStyle">
+ @import "{!URLFOR($Resource.contactme,'css/libs.css')}";
+ @import "{!URLFOR($Resource.contactme,'css/form.css')}";
+</style> 
+  <!--<link rel="stylesheet" href="URLFOR($Resource.contactme,'css/libs.css')"></link>
+  <link rel="stylesheet" href="URLFOR($Resource.contactme,'css/form.css')"></link>-->
+  
+</head>
+<body>
+  
+  <!--
+  Start of DoubleClick Floodlight Tag: Please do not remove
+  Activity name of this tag: LAF_OPEN
+  Creation Date: 08/05/2013
+  -->
+  <script type="text/javascript">
+  var axel = Math.random() + "";
+  var a = axel * 10000000000000;
+  document.write('<iframe src="http://806653.fls.doubleclick.net/activityi;src=806653;type=leadg245;cat=laf_o974;u1=[Customer Number];ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  </script>
+  <noscript>
+  <iframe src="http://806653.fls.doubleclick.net/activityi;src=806653;type=leadg245;cat=laf_o974;u1=[Customer Number];ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+  </noscript>
+  <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+  
+  <div class="root">
+    
+    <header role="banner">
+      <h1 class="content-width">
+        <a href="http://capitalone.com">
+          <img src="{!URLFOR($Resource.contactme,'img/logo-capital-one.jpg')}" alt="Capital One"/>
+        </a>
+      </h1>
+    </header>
+    
+    <div class="form-wrapper fc" role="main">
+      <div class="content-width">
+        <div class="offer">
+          <img src="{!URLFOR($Resource.contactme,'img/offer-dynamic.jpg')}" alt="Special Offer. Lock in a low rate and get started with $1,000 off closing costs. Provide us with your information to contact you or give us a call. No obligation."/>
+          <p>Provide us with your contact information or give us a call at <span class="bold"><span class="phoneNumber">1-855-371-4588</span>. No obligation.</span></p>
+        </div>
+      
+        <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="fc">
+          <input type="hidden" name="oid" value="00De0000002LW3U"/>
+          <input type="hidden" name="retURL" value="http://testcontactme.sbxqa10.cs15.force.com/confirmation"/>
+          
+          <p class="notice fl">All Fields Required</p>
+          <ul class="error-messages"></ul>
+          
+          <div class="column column1">
+            <h2>What type of loan are you looking for?</h2>
+            <div class="field">
+              <label for="00N30000008Qpio">Loan Type:</label>
+              <select id="00N30000008Qpio" name="00N30000008Qpio" title="Loan Type">
+                <option value="">&nbsp;</option>
+                <option value="Purchase">Purchase</option>
+                <option value="Cash-out Refinance">Cash-out Refinance</option>
+                <option value="Streamline Refinance">Streamline Refinance</option>
+                <option value="IRRRL">IRRRL</option>
+                <option value="Rate &amp; Term Refinance">Rate &amp; Term Refinance</option>
+                <option value="HEL – 1st Lien">HEL – 1st Lien</option>
+                <option value="HEL – 2nd Lien">HEL – 2nd Lien</option>
+                <option value="HELOC – 1st Lien">HELOC – 1st Lien</option>
+                <option value="HELOC – 2nd Lien">HELOC – 2nd Lien</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="00Na000000Ajs2j">Loan Amount:</label>
+              <input id="00Na000000Ajs2j" name="00Na000000Ajs2j" maxlength="20" type="text" pattern="[0-9]*" title="Loan Amount" />
+            </div>
+            <div class="field">
+              <label for="00N30000008Qpj9">Estimated property value:</label>
+              <input id="00N30000008Qpj9" name="00N30000008Qpj9" maxlength="20" type="text" pattern="[0-9]*" title="Estimated property value" />
+            </div>
+            <div class="field">
+              <label for="00Ne0000000i38k">Your estimated credit score</label>
+              <select  id="00Ne0000000i38k" name="00Ne0000000i38k" title="How Would you Describe Your Credit">
+                <option value="">&nbsp;</option>
+                <option value="Excellent (740+)">Excellent (740+)</option>
+                <option value="Very Good (720-739)">Very Good (720-739)</option>
+                <option value="Good (700-719)">Good (700-719)</option>
+                <option value="Fair (680-699)">Fair (680-699)</option>
+                <option value="Less than 680">Less than 680</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="00Ne0000000fv5e">When do you intend to apply?</label>
+              <select  id="00Ne0000000fv5e" name="00Ne0000000fv5e" title="When do you intend to apply?">
+                <option value="">&nbsp;</option>
+                <option value="In a few days">In a few days</option>
+                <option value="Within 2 to 4 weeks">Within 2 to 4 weeks</option>
+                <option value="3+ months">3+ months</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="00N30000008Qpj0">Property ZIP Code:</label>
+              <input id="00N30000008Qpj0" maxlength="10" name="00N30000008Qpj0" type="text" pattern="[0-9]*" title="Property ZIP code" />
+            </div>
+          </div>
+        
+          <div class="column column2">
+            <h2>How can we get a hold of you?</h2>
+            <div class="field">
+              <label for="first_name">First Name:</label>
+              <input id="first_name" maxlength="40" name="first_name" type="text" autocapitalize="words" />
+            </div>
+            <div class="field">
+              <label for="last_name">Last Name:</label>
+              <input id="last_name" maxlength="80" name="last_name" size="20" type="text" autocapitalize="words" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number:</label>
+              <input id="phone" maxlength="40" name="phone" type="tel" />
+            </div>
+            <div class="field">
+              <label for="email">Email Address:</label>
+              <input id="email" maxlength="80" name="email" type="email" />
+            </div>
+            <!-- <div class="field">
+              <label for="URL">Website:</label>
+              <input id="URL" maxlength="80" name="URL" size="20" type="url" />
+            </div> -->
+            <div class="field submit">
+              <input type="image" src="{!URLFOR($Resource.contactme,'img/button-form-submit.png')}" title="Contact Me"/>
+            </div>
+          </div>
+          
+          <p class="callout fl">Call us now at <strong><span class="phoneNumber">1-855-371-4588</span></strong> or provide your contact information and our Mortgage Savings Specialist will contact you soon to discuss loan options.</p>
+        </form>
+      </div>
+    </div>
+    
+    <footer role="contentinfo">
+      <div class="content-width">
+        <div class="row fc">
+          <nav class="links fl">
+            <a href="http://www.capitalone.com/contact/">Contact Us</a>
+            <a href="http://www.capitalone.com/identity-protection/privacy/">Privacy</a>
+            <a href="http://www.capitalone.com/identity-protection/commitment/">Security</a>
+            <a href="http://www.capitalone.com/legal/terms-conditions/">Terms &amp; Conditions</a>
+            <a href="http://www.capitalone.com/about/accessibility-commitment/">Accessibility</a>
+          </nav>
+          <nav class="social fr">
+            <a href="http://www.twitter.com/capitalone" class="tw" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/capitalone" class="fb" target="_blank">Facebook</a>
+            <a href="http://www.youtube.com/capitalone/" class="yt" target="_blank">YouTube</a>
+            <a href="https://plus.google.com/+CapitalOne/posts" class="gp" target="_blank">Google Plus</a>
+            <a href="http://pinterest.com/capitalone/" class="pi" target="_blank">Pinterest</a>
+          </nav>
+        </div>
+        <div class="row fc">
+          <div class="copyright fl">
+            <span>&copy; 2013 Capital One</span>
+          </div>
+
+        </div>
+        <div class="row legal">
+          <p>Advertised discount available only on applications submitted to Capital One 360 online or by phone between 8/14/13 and 10/15/13 that are funded.  Advertised discount can only be applied towards payment of closing costs, up to a total amount of $1,000. Any portion of the discount amount not used towards closing costs will be waived. Advertised discount not available on home equity loans or home equity lines of credit. This offer is non-transferrable and cannot be combined with any other offer.  </p>
+          <p>Not all loan products or terms are available in all states. Normal credit qualifications and other terms and conditions apply.  This does not represent an offer to enter into a loan agreement. Loans subject to credit approval. Products, rates and terms subject to change without notice.         </p>
+          <p>Products and services offered by Capital One, N.A., NMLS ID 453156, Equal Housing Lender and Member FDIC.  © 2013 Capital One. All rights reserved.</p>
+        </div>
+                    <div class="federal fl">
+    <a href="http://www.fdic.gov/" class="fdic">Member FDIC</a>
+    <span class="ehl">Equal Housing Lender</span>
+  </div>
+      </div>
+    </footer>
+    
+  </div>
+  
+  <script src="{!URLFOR($Resource.contactme,'js/libs.js')}"></script>
+  <script src="{!URLFOR($Resource.contactme,'js/main.js')}"></script>
+    <script>
+    $(function()
+    {
+      getPhoneNumbersFromURL();  
+    });
+  </script>
+</body>
+</html>
+
+</apex:page>

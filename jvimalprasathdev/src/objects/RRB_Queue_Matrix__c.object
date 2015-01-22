@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Current_queue_proficiency_level__c</fullName>
+        <externalId>false</externalId>
+        <label>Current queue proficiency level</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_assigned_user__c</fullName>
+        <externalId>false</externalId>
+        <label>Next assigned user</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Round_robin_status__c</fullName>
+        <externalId>false</externalId>
+        <label>Round Robin status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>W</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Y</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Round_robin_time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Time in Mins</inlineHelpText>
+        <label>Round Robin Wait time</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>RRB Queue Matrix</label>
+    <nameField>
+        <label>Queue Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>RRB Queue Matrix</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Round_Robin_Status_Is_Waiting</fullName>
+        <active>true</active>
+        <errorConditionFormula>And(ISPICKVAL(Round_robin_status__c, &apos;W&apos;),
+ISBLANK(Round_robin_time__c)
+)</errorConditionFormula>
+        <errorDisplayField>Round_robin_time__c</errorDisplayField>
+        <errorMessage>Please Enter Wait Time</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>round_robin_status_is_Not_W</fullName>
+        <active>true</active>
+        <description>Round robin time –  validation rules to say you enter number here only if round robin status is ‘W”</description>
+        <errorConditionFormula>AND(
+NOT(ISPICKVAL(Round_robin_status__c, &apos;W&apos;)),
+NOT(ISBLANK( Round_robin_time__c))
+)</errorConditionFormula>
+        <errorDisplayField>Round_robin_time__c</errorDisplayField>
+        <errorMessage>You can enter number here only if Round robin status is ‘W”</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Reset_Scheduler</fullName>
+        <availability>online</availability>
+        <description>Click this button to reset Scheduler and user daily count.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Reset Scheduler</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var sch = &apos;SchedulerClass sh = new SchedulerClass();&apos; + &apos;sh.TestRun();&apos;; 
+var res = &apos;ResetDailyCount rc = new ResetDailyCount();&apos; + &apos;rc.reset();&apos;; 
+
+try{ 
+if (confirm(&apos;Are you sure? Resetting the scheduler will zero out all users counts for the day.&apos;)) {//Added by vimal for the story B-560076 
+sforce.apex.executeAnonymous(sch); 
+sforce.apex.executeAnonymous(res); 
+alert(&quot;Scheduler and Daily Count is reset successfully.&quot;); 
+window.location.reload(); 
+} 
+else{ 
+window.location.reload(); //Added by vimal for the story B-560076 
+} 
+} 
+catch(err){ 
+txt=&quot;There was an error on this page.\n\n&quot;; 
+txt+=&quot;Error description: &quot; + err.description + &quot;\n\n&quot;; 
+txt+=&quot;Click OK to continue.\n\n&quot;; 
+alert(txt); 
+}</url>
+    </webLinks>
+</CustomObject>

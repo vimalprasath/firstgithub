@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RRB Queue Member</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RRB Queue Members</value>
+    </caseValues>
+    <fields>
+        <label><!-- Queue member proficiency --></label>
+        <name>Queue_member_proficiency__c</name>
+    </fields>
+    <fields>
+        <label><!-- RRB Queue Matrix --></label>
+        <name>RRB_Queue_Matrix__c</name>
+        <relationshipLabel><!-- RRB Queue Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- RRB Queue Members --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Queue Member&apos;s Proficiency cannot be Zero --></errorMessage>
+        <name>Queue_Members_Proficiency_cannot_be_0</name>
+    </validationRules>
+</CustomObjectTranslation>

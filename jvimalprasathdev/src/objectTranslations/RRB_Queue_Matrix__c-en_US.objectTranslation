@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RRB Queue Matrix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RRB Queue Matrix</value>
+    </caseValues>
+    <fields>
+        <label><!-- Current queue proficiency level --></label>
+        <name>Current_queue_proficiency_level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next assigned user --></label>
+        <name>Next_assigned_user__c</name>
+    </fields>
+    <fields>
+        <label><!-- Round Robin status --></label>
+        <name>Round_robin_status__c</name>
+        <picklistValues>
+            <masterLabel>N</masterLabel>
+            <translation><!-- N --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W</masterLabel>
+            <translation><!-- W --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Time in Mins --></help>
+        <label><!-- Round Robin Wait time --></label>
+        <name>Round_robin_time__c</name>
+    </fields>
+    <layouts>
+        <layout>RRB Queue Matrix Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please Enter Wait Time --></errorMessage>
+        <name>Round_Robin_Status_Is_Waiting</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can enter number here only if Round robin status is ‘W” --></errorMessage>
+        <name>round_robin_status_is_Not_W</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Reset_Scheduler --></label>
+        <name>Reset_Scheduler</name>
+    </webLinks>
+</CustomObjectTranslation>

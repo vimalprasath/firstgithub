@@ -1,0 +1,159 @@
+<apex:page showHeader="false" action="{!savelead}" controller="HomeLoanWTLController_CLS">
+
+<html lang="en">
+<head>
+  
+  <title>Capital One &ndash; Home Loans</title>
+  
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width"></meta>
+ <style type="text/css" title="currentStyle">
+ @import "{!URLFOR($Resource.contactme,'css/libs.css')}";
+ @import "{!URLFOR($Resource.contactme,'css/form.css')}";
+</style> 
+  <!--<link rel="stylesheet" href="URLFOR($Resource.contactme,'css/libs.css')"></link>
+  <link rel="stylesheet" href="URLFOR($Resource.contactme,'css/form.css')"></link>-->
+  
+</head>
+<body>
+  
+  <!--
+  Start of DoubleClick Floodlight Tag: Please do not remove
+  Activity name of this tag: LAF_OPEN
+  Creation Date: 08/05/2013
+  -->
+  <script type="text/javascript">
+  var axel = Math.random() + "";
+  var a = axel * 10000000000000;
+  document.write('<iframe src="http://806653.fls.doubleclick.net/activityi;src=806653;type=leadg245;cat=laf_o974;u1=[Customer Number];ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  </script>
+  <noscript>
+  <iframe src="http://806653.fls.doubleclick.net/activityi;src=806653;type=leadg245;cat=laf_o974;u1=[Customer Number];ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+  </noscript>
+  <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+  
+  <div class="root">
+    
+
+    
+    <div class="form-wrapper standalone fc" role="main">
+      <div class="content-width">
+        <div class="offer">
+          <img src="{!URLFOR($Resource.contactme,'img/offer-dynamic.jpg')}" alt="Special Offer. Lock in a low rate and get started with $1,000 off closing costs."/>
+          <p>Provide us with your contact information or give us a call at <span class="bold"><span class="phoneNumber">1-855-232-0067</span>. No obligation.</span></p>
+        </div>
+      
+        <apex:form styleClass="fc">
+          
+          
+          
+          <p class="notice fl">All Fields Required | Secure Form</p>
+          <ul class="error-messages"></ul>
+          
+          <div class="column column1">
+            <h2>What type of loan are you looking for?</h2>
+            <div class="field">
+              <label for="loan_type">Loan Type:</label>
+              <select id="loan_type" name="loan_type" title="Loan Type" aria-required="true">
+                <option value=""></option>
+                <option value="Buy a Home">Buy a Home</option>
+                <option value="Mortgage Refinance">Mortgage Refinance</option>
+                <option value="Cash-Out Refinance">Cash-Out Refinance</option>
+                <!--<option value="Streamline Refinance">Streamline Refinance</option>
+                <option value="IRRRL">IRRRL</option>
+                <option value="Rate &amp; Term Refinance">Rate &amp; Term Refinance</option>
+                <option value="HEL – 1st Lien">HEL – 1st Lien</option>
+                <option value="HEL – 2nd Lien">HEL – 2nd Lien</option>
+                <option value="HELOC – 1st Lien">HELOC – 1st Lien</option>
+                <option value="HELOC – 2nd Lien">HELOC – 2nd Lien</option>
+                <option value="Other">Other</option>-->
+              </select>
+            </div>
+            <div class="field">
+              <label for="loan_amount">Loan Amount:</label>
+              <input id="loan_amount" name="loan_amount" maxlength="20" type="text" pattern="[0-9]*" title="Loan Amount"  aria-required="true"/>
+            </div>
+            <div class="field">
+              <label for="estimated_value">Estimated property value:</label>
+              <input id="estimated_value" name="estimated_value" maxlength="20" type="text" pattern="[0-9]*" title="Estimated property value"  aria-required="true"/>
+            </div>
+            <div class="field">
+              <label for="credit_score">Your estimated credit score</label>
+              <select  id="credit_score" name="credit_score" title="How Would you Describe Your Credit" aria-required="true">
+                <option value=""></option>
+                <option value="Excellent (740+)">Excellent (740+)</option>
+                <option value="Very Good (720-739)">Very Good (720-739)</option>
+                <option value="Good (700-719)">Good (700-719)</option>
+                <option value="Fair (680-699)">Fair (680-699)</option>
+                <option value="Less than 680">Less than 680</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="when_apply">When do you intend to apply?</label>
+              <select  id="when_apply" name="when_apply" title="When do you intend to apply?" aria-required="true">
+                <option value=""></option>
+                <option value="Immediately">Immediately</option>
+                <option value="In a few days">In a few days</option>
+                <option value="Within 2 to 4 weeks">Within 2 to 4 weeks</option>
+                <option value="3+ months">3+ months</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="zip_code">Property ZIP Code:</label>
+              <input id="zip_code" maxlength="10" name="zip_code" type="text" pattern="[0-9]*" title="Property ZIP code" aria-required="true" />
+            </div>
+          </div>
+        
+          <div class="column column2">
+            <h2>How can we get a hold of you?</h2>
+            <div class="field">
+              <label for="first_name">First Name:</label>
+              <input id="first_name" maxlength="40" name="first_name" type="text" autocapitalize="words" aria-required="true" />
+            </div>
+            <div class="field">
+              <label for="last_name">Last Name:</label>
+              <input id="last_name" maxlength="80" name="last_name" size="20" type="text" autocapitalize="words" aria-required="true" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number:</label>
+              <input id="phone" maxlength="40" name="phone" type="tel" aria-required="true" />
+            </div>
+            <div class="field">
+              <label for="email">Email Address:</label>
+              <input id="email" maxlength="80" name="email" type="email" aria-required="true" />
+            </div>
+            
+            <div class="field submit">
+            <apex:commandButton action="{!savelead}" alt="Contact Me" image="{!URLFOR($Resource.contactme,'img/button-form-submit.png')}" style="float:right;" />
+           
+            </div>
+          </div>
+          
+          <p class="callout fl">Call us now at <strong><span class="phoneNumber">1-855-232-0067</span></strong> or provide your contact information and our Mortgage Savings Specialist will contact you soon to discuss loan options.</p>
+        </apex:form>
+      </div>
+    
+    <div class="legal">
+        <div class="content-width">
+        
+          <p>Advertised discount available only on applications submitted to Capital One 360 online or by phone between 8/14/13 and 10/15/13 that are funded.  Advertised discount can only be applied towards payment of closing costs, up to a total amount of $1,000. Any portion of the discount amount not used towards closing costs will be waived. Advertised discount not available on home equity loans or home equity lines of credit. This offer is non-transferrable and cannot be combined with any other offer.  </p>
+          <p>Not all loan products or terms are available in all states. Normal credit qualifications and other terms and conditions apply.  This does not represent an offer to enter into a loan agreement. Loans subject to credit approval. Products, rates and terms subject to change without notice.         </p>
+          <p>Products and services offered by Capital One, N.A., NMLS ID 453156, Equal Housing Lender and Member FDIC.  © 2013 Capital One. All rights reserved.</p>
+        
+          
+          <div class="federal fr">
+            <a href="http://www.fdic.gov/" class="fdic">Member FDIC</a>
+            <span class="ehl">Equal Housing Lender</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src="{!URLFOR($Resource.contactme,'js/libs.js')}"></script>
+  <script src="{!URLFOR($Resource.contactme,'js/main.js')}"></script>
+</body>
+</html>
+
+</apex:page>

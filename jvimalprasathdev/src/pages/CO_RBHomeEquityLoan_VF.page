@@ -1,0 +1,33 @@
+<apex:page standardController="Customer_Portal_Lead__c"  extensions="CO_CustomerPortalController" sidebar="False" showHeader="False" >    
+    <link href="default.css" rel="stylesheet" type="text/css"/>
+ <link href="http://www.capitalone.com/assets/css/global/default.css" rel="stylesheet" type="text/css"/>
+ <link href="http://www.capitalone.com/assets/css/global/print.css" rel="stylesheet" media="print" type="text/css"  />
+ <link href="http://www.capitalone.com/assets/css/global/supernav.css" rel="stylesheet" type="text/css" />
+      <apex:form >
+       <body>
+       <div role="banner" id="header"> 
+
+<div class="cap-one-logo-sprite"> 
+ <h1>
+  <a href="http://www.capitalone.com/" title="Back to Capital One home">
+  <img class="logo-cap-one" src="http://www.capitalone.com/assets/img/global/logo/sprite/header-logo.ns.png" title="Capital One® logo with a link to the home page" alt="Capital One logo" height="187" width="241"/>
+  </a>
+ </h1> 
+</div>
+</div>
+        <apex:pageMessages />
+        <apex:pageBlock title="Home Equity Loan" >
+  
+              <b>Applications for Home Equity Loans can only be taken using the Touchpoint application.</b>
+              <br></br>
+              <br></br>
+              Click Close to return to the Pipeline View screen, or use the sign out link above to exit the Relationship Banker Portal
+               <apex:pageBlockSection columns="1"> 
+                    <apex:commandButton action="{!Close}"  value="Close" style="float:right;" id="closeButton"/>                          
+                    
+          </apex:pageBlockSection> 
+              
+        </apex:pageBlock>
+       </body>
+    </apex:form>
+</apex:page>

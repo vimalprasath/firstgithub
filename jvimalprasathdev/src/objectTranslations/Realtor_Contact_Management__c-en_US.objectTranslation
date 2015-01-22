@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Realtor Contact Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Realtor Contact Managements</value>
+    </caseValues>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Realtor Contact Managements --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Realtor Contact --></label>
+        <name>Realtor_Contact__c</name>
+        <relationshipLabel><!-- Realtor Contact Managements --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

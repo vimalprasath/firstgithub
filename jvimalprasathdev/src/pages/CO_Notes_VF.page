@@ -1,0 +1,27 @@
+<!--
+* @Created By : Leena (Wipro),   @Created Date : 10 Aug 2012
+* @Last Modified By : Leena (Wipro),  @Modified Date : 11 Sep 2012
+* @description : This Page creates a new note record and saves it in database
+*                 
+-->
+<apex:page standardController="Notes__c" recordSetVar="Notes__c" extensions="CO_Notes_CL" >
+<apex:form title="New Note">
+    <apex:pageMessages />
+    <apex:pageBlock title="Note Edit">
+         <apex:pageBlockButtons >
+             <apex:commandButton action="{!SaveNote}" value="Save"/>
+             <apex:commandButton action="{!Cancel}" value="Cancel"/>     
+         </apex:pageBlockButtons>         
+         <apex:pageBlockSection showHeader="false" columns="1" id="block1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Notes Type" />
+                <apex:inputField value="{!Note.Comments_List__c}" />             
+            </apex:pageBlockSectionItem> 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Comments" for="comm"/>
+                <apex:inputField value="{!Note.Comments__c}" id="comm" style="width:60%"/>                
+            </apex:pageBlockSectionItem>                        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

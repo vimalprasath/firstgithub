@@ -1,0 +1,56 @@
+<apex:page Controller="UserController1">
+<apex:form >
+<apex:pageMessages />
+            
+        <apex:pageBlock id="CustomList" title="My Users" mode="edit" >
+        <apex:pageblocktable value="{!usrwrap}" var="u" id="theTable" >
+        
+        <apex:column >
+        <apex:commandLink style="font-family: 'Verdana','Geneva',sans-serif; font-size: 91.3%; height: 15px; margin-bottom: -15px;
+        vertical-align: middle; color:#1468B6;padding-bottom:10px;" value="Edit" reRender="CustomList" onclick="window.open('/apex/QueueMgmtEdit?id={!u.usr.id}','_parent','', 1)">
+        </apex:commandLink>
+        &nbsp;
+        </apex:column>
+                
+        <apex:column >
+        <apex:facet name="header">Name
+        </apex:facet>
+        <a href="/{!u.usr.id}" target="_">
+        <apex:outputField value="{!u.usr.Name}"/></a>
+        </apex:column>
+        
+        <apex:column >
+        <apex:facet name="header">OOO
+        </apex:facet>
+        <apex:outputField value="{!u.usr.OOO__c}"/>
+        </apex:column>
+        
+        <apex:column >
+        <apex:facet name="header">Lead Limit
+        </apex:facet>
+        <apex:outputField value="{!u.usr.Lead_limit__c}"/>
+        </apex:column>
+        
+        <apex:column >
+        <apex:facet name="header">Unlimited Leads
+        </apex:facet>
+        <apex:outputField value="{!u.usr.Unlimited_Leads__c}"/>
+        </apex:column>
+        
+        <apex:column >
+        <apex:facet name="header">Count
+        </apex:facet>
+        <apex:outputField value="{!u.usr.Count__c}"/>
+        </apex:column>
+        
+        <apex:column >
+        <apex:facet name="header">Available
+        </apex:facet>
+        <apex:outputField value="{!u.usr.Avavilable__c}"/>
+        </apex:column>
+        
+                    
+</apex:pageblocktable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
