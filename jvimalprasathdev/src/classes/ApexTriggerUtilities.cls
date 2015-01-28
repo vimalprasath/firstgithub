@@ -1,6 +1,6 @@
 Public class ApexTriggerUtilities{
 
-/*Lead Trigger Static Variable*/
+/*Lead Trigger Static Variable vimal*/
 
 Public static boolean IsRecursive = false; 
 
